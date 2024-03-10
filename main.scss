@@ -1,0 +1,83 @@
+// ********* DESIGN SYSTEM *********
+
+// ************ COLORS ************
+$color-cinder: #151515;
+$color-medium-aquamarine: #4ee1a0;
+$color-dark-jungle-green: #242424;
+$color-light-grey: #d9d9d9;
+$color-white: #ffffff;
+$color-bittersweet: #ff6f5b;
+
+// ********** FONT-FAMILY **********
+$font-space-grotesk: "Space Grotesk", sans-serif;
+
+// ********* FONT-WEIGHTS **********
+$fw-500: 500;
+$fw-700: 700;
+
+// ************* BASE **************
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-cinder;
+  color: $color-white;
+  font-family: $font-space-grotesk;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+// ********* 375px LAYOUT *********
+
+// ********* HEADER-FOOTER *********
+.header-footer {
+  width: 15.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto 4.9rem;
+
+  &__name {
+    font-size: 2.4rem;
+    font-weight: $fw-700;
+    line-height: 3.2rem;
+    letter-spacing: 0.0333rem;
+    color: $color-white;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1.8rem;
+  }
+}
+
+// *********** ABOUT-ME ***********
+.about-me {
+  margin-bottom: 8rem;
+
+  &__img {
+    display: block;
+    width: 17.4rem;
+    height: auto;
+    margin: 0 auto 4rem;
+  }
+
+  &__text {
+    padding: 0 1.6rem 0;
+  }
+}

@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background: #151515;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.header-footer {
+  width: 15.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto 4.9rem;
+}
+.header-footer__name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: 0.0333rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+.header-footer__socials {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.about-me {
+  margin-bottom: 8rem;
+}
+.about-me__img {
+  display: block;
+  width: 17.4rem;
+  height: auto;
+  margin: 0 auto 4rem;
+}
+.about-me__text {
+  padding: 0 1.6rem 0;
+}/*# sourceMappingURL=main.css.map */
