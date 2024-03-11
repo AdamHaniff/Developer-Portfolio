@@ -46,12 +46,80 @@ body {
 .about-me {
   margin-bottom: 8rem;
 }
+.about-me__img-background {
+  background: linear-gradient(180deg, rgba(36, 36, 36, 0) 0.65%, #242424 100%);
+  width: 17.4rem;
+  height: 38.3rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
 .about-me__img {
   display: block;
   width: 17.4rem;
   height: auto;
+  filter: grayscale(100%);
   margin: 0 auto 4rem;
 }
 .about-me__text {
   padding: 0 1.6rem 0;
+  text-align: center;
+}
+.about-me__header {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.1136rem;
+  margin-bottom: 2rem;
+}
+.about-me__name {
+  display: inline-block;
+  border-bottom: 0.4rem solid #4ee1a0;
+}
+.about-me__info {
+  color: #d9d9d9;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  margin-bottom: 2.4rem;
+}
+.about-me__email-container {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 2.4rem;
+}
+.about-me__email-icon-link {
+  height: 2.4rem;
+}
+.about-me__email {
+  color: #ffffff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border-bottom: 0.2rem solid #4ee1a0;
+}
+.about-me .action-text {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  letter-spacing: 0.2286rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid #4ee1a0;
+}
+.about-me__rings {
+  display: block;
+  position: absolute;
+  top: 12.4rem;
+  left: -36.2rem;
+}
+.about-me__circle {
+  display: block;
+  position: absolute;
+  top: 25.4rem;
+  right: -6.5rem;
 }/*# sourceMappingURL=main.css.map */

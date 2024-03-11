@@ -7,6 +7,11 @@ $color-dark-jungle-green: #242424;
 $color-light-grey: #d9d9d9;
 $color-white: #ffffff;
 $color-bittersweet: #ff6f5b;
+$color-background-image-mobile: linear-gradient(
+  180deg,
+  rgba(36, 36, 36, 0) 0.65%,
+  $color-dark-jungle-green 100%
+);
 
 // ********** FONT-FAMILY **********
 $font-space-grotesk: "Space Grotesk", sans-serif;
@@ -70,14 +75,94 @@ body {
 .about-me {
   margin-bottom: 8rem;
 
+  &__img-background {
+    background: $color-background-image-mobile;
+    width: 17.4rem;
+    height: 38.3rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
   &__img {
     display: block;
     width: 17.4rem;
     height: auto;
+    filter: grayscale(100%);
     margin: 0 auto 4rem;
   }
 
   &__text {
     padding: 0 1.6rem 0;
+    text-align: center;
+  }
+
+  &__header {
+    font-size: 4rem;
+    font-weight: $fw-700;
+    line-height: 4rem;
+    letter-spacing: -0.1136rem;
+    margin-bottom: 2rem;
+  }
+
+  &__name {
+    display: inline-block;
+    border-bottom: 0.4rem solid $color-medium-aquamarine;
+  }
+
+  &__info {
+    color: $color-light-grey;
+    font-size: 1.6rem;
+    font-weight: $fw-500;
+    line-height: 2.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__email-container {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 2.4rem;
+  }
+
+  &__email-icon-link {
+    height: 2.4rem;
+  }
+
+  &__email {
+    color: $color-white;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border-bottom: 0.2rem solid $color-medium-aquamarine;
+  }
+
+  .action-text {
+    color: $color-white;
+    font-size: 1.6rem;
+    font-weight: $fw-700;
+    line-height: 2.6rem;
+    letter-spacing: 0.2286rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    border-bottom: 0.2rem solid $color-medium-aquamarine;
+  }
+
+  &__rings {
+    display: block;
+    position: absolute;
+    top: 12.4rem;
+    // left: -34.2rem;
+    left: -36.2rem;
+    // z-index: -2;
+  }
+
+  &__circle {
+    display: block;
+    position: absolute;
+    top: 25.4rem;
+    right: -6.5rem;
   }
 }
