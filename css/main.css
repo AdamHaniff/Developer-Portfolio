@@ -22,6 +22,24 @@ body {
   height: 100%;
 }
 
+body {
+  padding: 0 1.6rem;
+}
+
+.action-text:link,
+.action-text:visited {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  letter-spacing: 0.2286rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid #4ee1a0;
+}
+
 .header-footer {
   width: 15.4rem;
   display: flex;
@@ -29,7 +47,7 @@ body {
   gap: 2rem;
   margin: 2rem auto 4.9rem;
 }
-.header-footer__name {
+.header-footer__name:link, .header-footer__name:visited {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 3.2rem;
@@ -64,7 +82,6 @@ body {
   margin: 0 auto 4rem;
 }
 .about-me__text {
-  padding: 0 1.6rem 0;
   text-align: center;
 }
 .about-me__header {
@@ -91,35 +108,76 @@ body {
   align-items: start;
   margin-bottom: 2.4rem;
 }
-.about-me__email-icon-link {
+.about-me__email-icon-link:link, .about-me__email-icon-link:visited {
   height: 2.4rem;
 }
-.about-me__email {
+.about-me__email:link, .about-me__email:visited {
   color: #ffffff;
   font-size: 1.6rem;
   text-decoration: none;
-  border-bottom: 0.2rem solid #4ee1a0;
-}
-.about-me .action-text {
-  color: #ffffff;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 2.6rem;
-  letter-spacing: 0.2286rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding-bottom: 1rem;
   border-bottom: 0.2rem solid #4ee1a0;
 }
 .about-me__rings {
   display: block;
   position: absolute;
   top: 12.4rem;
-  left: -36.2rem;
+  left: -34.2rem;
+  z-index: -2;
 }
 .about-me__circle {
   display: block;
   position: absolute;
   top: 25.4rem;
   right: -6.5rem;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  border-top: 0.1rem solid #ffffff;
+  padding: 4rem 0;
+  position: relative;
+}
+.skills__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills__name-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.skills__name {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.1rem;
+}
+.skills__icon {
+  width: 2.5rem;
+  height: 2.4rem;
+}
+.skills__icon path {
+  fill: #ffffff;
+}
+.skills__experience {
+  color: #d9d9d9;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+}
+.skills__rings {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: -38.5rem;
+  transform: translateY(50%);
+  z-index: -1;
+}
+
+.projects {
+  border-top: 0.1rem solid #ffffff;
 }/*# sourceMappingURL=main.css.map */
