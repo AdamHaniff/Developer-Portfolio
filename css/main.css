@@ -32,7 +32,6 @@ body {
   color: #ffffff;
   font-size: 1.6rem;
   font-weight: 700;
-  line-height: 2.6rem;
   letter-spacing: 0.2286rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -179,5 +178,79 @@ body {
 }
 
 .projects {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
   border-top: 0.1rem solid #ffffff;
+  padding: 8rem 0;
+}
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects-header__title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.1136rem;
+}
+
+.project__img-container {
+  max-width: 34.5rem;
+  margin-bottom: 2rem;
+}
+.project__img {
+  display: block;
+  width: 100%;
+}
+.project__name {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+.project__technologies {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.project__technology {
+  color: #d9d9d9;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+}
+.project__action-texts {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.contact {
+  background: #242424;
+  margin: 0 -1.6rem;
+  padding: 6rem 1.6rem 8.7rem;
+}
+.contact__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.contact__header {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: -0.1136rem;
+}
+.contact__text {
+  color: #d9d9d9;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
 }/*# sourceMappingURL=main.css.map */
