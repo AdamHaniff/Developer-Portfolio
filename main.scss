@@ -6,6 +6,7 @@ $color-medium-aquamarine: #4ee1a0;
 $color-dark-jungle-green: #242424;
 $color-light-grey: #d9d9d9;
 $color-white: #ffffff;
+$color-white-50-percent: rgba(255, 255, 255, 0.5);
 $color-bittersweet: #ff6f5b;
 $color-background-image-mobile: linear-gradient(
   180deg,
@@ -317,5 +318,38 @@ body {
     font-size: 1.6rem;
     font-weight: $fw-500;
     line-height: 2.6rem;
+  }
+}
+
+// ************** FORM **************
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__input-error-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid $color-white;
+    padding-bottom: 1.8rem;
+  }
+
+  &__input {
+    background: inherit;
+    border: none;
+    margin-left: 2.4rem;
+    color: $color-white-50-percent;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: $fw-500;
+    line-height: 2.6rem;
+    letter-spacing: -0.0222rem;
   }
 }

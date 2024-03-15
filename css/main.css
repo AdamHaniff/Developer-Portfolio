@@ -253,4 +253,33 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 2.6rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.form__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form__input-error-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid #ffffff;
+  padding-bottom: 1.8rem;
+}
+.form__input {
+  background: inherit;
+  border: none;
+  margin-left: 2.4rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  letter-spacing: -0.0222rem;
 }/*# sourceMappingURL=main.css.map */
