@@ -342,14 +342,44 @@ body {
   }
 
   &__input {
+    flex-grow: 1;
     background: inherit;
     border: none;
-    margin-left: 2.4rem;
-    color: $color-white-50-percent;
+    padding-left: 2.4rem;
+    color: $color-white;
     font-family: inherit;
     font-size: 1.6rem;
     font-weight: $fw-500;
     line-height: 2.6rem;
     letter-spacing: -0.0222rem;
+
+    &::placeholder {
+      color: $color-white-50-percent;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__error-icon {
+    display: block;
+    width: 2.45rem;
+    height: 2.45rem;
+    margin-left: 1rem;
+  }
+
+  &__error {
+    margin: 0 0 -1.1rem auto;
+    color: $color-bittersweet;
+    font-size: 1.2rem;
+    font-weight: $fw-500;
+    line-height: 1.6rem;
+    letter-spacing: -0.0167rem;
+  }
+
+  &__input--message {
+    height: 8.7rem;
+    resize: none;
   }
 }

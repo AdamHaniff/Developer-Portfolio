@@ -273,13 +273,41 @@ body {
   padding-bottom: 1.8rem;
 }
 .form__input {
+  flex-grow: 1;
   background: inherit;
   border: none;
-  margin-left: 2.4rem;
-  color: rgba(255, 255, 255, 0.5);
+  padding-left: 2.4rem;
+  color: #ffffff;
   font-family: inherit;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 2.6rem;
   letter-spacing: -0.0222rem;
+}
+.form__input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.form__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.form__input:focus {
+  outline: none;
+}
+.form__error-icon {
+  display: block;
+  width: 2.45rem;
+  height: 2.45rem;
+  margin-left: 1rem;
+}
+.form__error {
+  margin: 0 0 -1.1rem auto;
+  color: #ff6f5b;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  letter-spacing: -0.0167rem;
+}
+.form__input--message {
+  height: 8.7rem;
+  resize: none;
 }/*# sourceMappingURL=main.css.map */
