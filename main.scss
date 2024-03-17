@@ -51,6 +51,7 @@ body {
   padding: 0 1.6rem;
 }
 
+.action-text,
 .action-text:link,
 .action-text:visited {
   display: inline-block;
@@ -61,10 +62,11 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   padding-bottom: 1rem;
+  border: none;
   border-bottom: 0.2rem solid $color-medium-aquamarine;
 }
 
-// ********* HEADER-FOOTER *********
+// ************* HEADER *************
 .header-footer {
   width: 15.4rem;
   display: flex;
@@ -297,6 +299,7 @@ body {
   background: $color-dark-jungle-green;
   margin: 0 -1.6rem;
   padding: 6rem 1.6rem 8.7rem;
+  position: relative;
 
   &__text-container {
     display: flex;
@@ -326,6 +329,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  position: relative;
+  z-index: 3;
 
   &__input-container {
     display: flex;
@@ -382,4 +387,34 @@ body {
     height: 8.7rem;
     resize: none;
   }
+
+  &__btn {
+    background: none;
+    align-self: flex-end;
+    font-family: inherit;
+  }
+
+  &__rings {
+    display: block;
+    position: absolute;
+    top: 51.7rem;
+    left: -34.3rem;
+    z-index: 2;
+  }
+}
+
+// ************* FOOTER *************
+.footer {
+  background: $color-dark-jungle-green;
+  margin: 0 -1.6rem;
+  padding: 0 1.6rem 6rem;
+
+  &__border {
+    border-top: 0.1rem solid $color-white;
+    margin-bottom: 3.9rem;
+  }
+}
+
+.centered {
+  margin: 0 auto;
 }

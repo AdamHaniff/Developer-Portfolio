@@ -26,6 +26,7 @@ body {
   padding: 0 1.6rem;
 }
 
+.action-text,
 .action-text:link,
 .action-text:visited {
   display: inline-block;
@@ -36,6 +37,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   padding-bottom: 1rem;
+  border: none;
   border-bottom: 0.2rem solid #4ee1a0;
 }
 
@@ -234,6 +236,7 @@ body {
   background: #242424;
   margin: 0 -1.6rem;
   padding: 6rem 1.6rem 8.7rem;
+  position: relative;
 }
 .contact__text-container {
   display: flex;
@@ -259,6 +262,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  position: relative;
+  z-index: 3;
 }
 .form__input-container {
   display: flex;
@@ -310,4 +315,30 @@ body {
 .form__input--message {
   height: 8.7rem;
   resize: none;
+}
+.form__btn {
+  background: none;
+  align-self: flex-end;
+  font-family: inherit;
+}
+.form__rings {
+  display: block;
+  position: absolute;
+  top: 51.7rem;
+  left: -34.3rem;
+  z-index: 2;
+}
+
+.footer {
+  background: #242424;
+  margin: 0 -1.6rem;
+  padding: 0 1.6rem 6rem;
+}
+.footer__border {
+  border-top: 0.1rem solid #ffffff;
+  margin-bottom: 3.9rem;
+}
+
+.centered {
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */
