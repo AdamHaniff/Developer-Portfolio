@@ -5,9 +5,9 @@ import "regenerator-runtime/runtime";
 const contactMe = document.querySelectorAll('[href="#contact"]');
 const contactSection = document.querySelector(".contact");
 const sendMessageBtn = document.querySelector(".form__btn");
-const formInput = document.querySelectorAll(".form__input");
-
-console.log(formInput);
+const nameInput = document.querySelector('[name="name"]');
+const emailInput = document.querySelector('[name="email"]');
+const messageInput = document.querySelector('[name="message"]');
 
 // EVENT LISTENER CALLBACK FUNCTION
 function scrollToContactSection(e) {
