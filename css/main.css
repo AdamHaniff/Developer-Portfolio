@@ -341,4 +341,8 @@ body {
 
 .centered {
   margin: 0 auto;
+}
+
+.form__input-error-icon--error {
+  border-bottom: 0.1rem solid #ff6f5b;
 }/*# sourceMappingURL=main.css.map */

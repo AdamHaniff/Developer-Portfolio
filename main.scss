@@ -418,3 +418,12 @@ body {
 .centered {
   margin: 0 auto;
 }
+
+// *** CLASSES USED WITH JAVASCRIPT ***
+
+// *************** FORM ***************
+.form {
+  &__input-error-icon--error {
+    border-bottom: 0.1rem solid $color-bittersweet;
+  }
+}
