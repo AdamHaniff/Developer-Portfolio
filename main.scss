@@ -39,6 +39,7 @@ body {
   background: $color-cinder;
   color: $color-white;
   font-family: $font-space-grotesk;
+  overflow-x: hidden;
 }
 
 html,
@@ -167,11 +168,12 @@ body {
     z-index: -2;
   }
 
-  &__circle {
-    display: block;
+  &__circle-container {
+    width: 6.5rem;
     position: absolute;
     top: 25.4rem;
-    right: -6.5rem;
+    right: 0;
+    overflow-x: hidden;
   }
 }
 
@@ -220,13 +222,14 @@ body {
     line-height: 2.6rem;
   }
 
-  &__rings {
-    display: block;
+  &__rings-container {
+    width: 18.6rem;
     position: absolute;
     bottom: 0;
-    right: -38.5rem;
+    right: -1.6rem;
     transform: translateY(50%);
     z-index: -1;
+    overflow-x: hidden;
   }
 }
 
@@ -425,5 +428,9 @@ body {
 .form {
   &__input-error-icon--error {
     border-bottom: 0.1rem solid $color-bittersweet;
+  }
+
+  &__input-error-icon--success {
+    border-bottom: 0.1rem solid $color-medium-aquamarine;
   }
 }

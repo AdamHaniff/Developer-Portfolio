@@ -15,6 +15,7 @@ body {
   background: #151515;
   color: #ffffff;
   font-family: "Space Grotesk", sans-serif;
+  overflow-x: hidden;
 }
 
 html,
@@ -125,11 +126,12 @@ body {
   left: -34.2rem;
   z-index: -2;
 }
-.about-me__circle {
-  display: block;
+.about-me__circle-container {
+  width: 6.5rem;
   position: absolute;
   top: 25.4rem;
-  right: -6.5rem;
+  right: 0;
+  overflow-x: hidden;
 }
 
 .skills {
@@ -170,13 +172,14 @@ body {
   font-weight: 500;
   line-height: 2.6rem;
 }
-.skills__rings {
-  display: block;
+.skills__rings-container {
+  width: 18.6rem;
   position: absolute;
   bottom: 0;
-  right: -38.5rem;
+  right: -1.6rem;
   transform: translateY(50%);
   z-index: -1;
+  overflow-x: hidden;
 }
 
 .projects {
@@ -345,4 +348,7 @@ body {
 
 .form__input-error-icon--error {
   border-bottom: 0.1rem solid #ff6f5b;
+}
+.form__input-error-icon--success {
+  border-bottom: 0.1rem solid #4ee1a0;
 }/*# sourceMappingURL=main.css.map */

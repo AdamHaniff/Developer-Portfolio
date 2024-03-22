@@ -55,11 +55,6 @@ form.addEventListener("submit", function (e) {
     if (input.value === "") displayError(input, "Sorry, can't be empty");
   }
 
-  // After checking all inputs, prevent form submission if any input is empty
-  for (let input of formInputs) {
-    if (input.value === "") return;
-  }
-
   // Check if name input value is not valid
   const nameInput = formInputs[0];
   const nameValue = nameInput.value;
@@ -69,5 +64,14 @@ form.addEventListener("submit", function (e) {
   if (isNameNotValid) {
     displayError(nameInput, "Sorry, invalid format here");
     return;
+  } else {
+    // If the name input value is valid, change 'form__input-error-icon' border-bottom to #4ee1a0
+    const formInputErrorIcon = nameInput.closest(".form__input-error-icon");
+    formInputErrorIcon.classList.add("form__input-error-icon--success");
+  }
+
+  // After checking all inputs, prevent form submission if any input is empty
+  for (let input of formInputs) {
+    if (input.value === "") return;
   }
 });
