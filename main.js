@@ -1,5 +1,5 @@
-import "core-js/stable";
-import "regenerator-runtime/runtime";
+// import "core-js/stable";
+// import "regenerator-runtime/runtime";
 
 // VARIABLES
 const contactMe = document.querySelectorAll('[href="#contact"]');
@@ -8,6 +8,11 @@ const form = document.querySelector(".form");
 const formInputs = document.querySelectorAll(".form__input");
 
 // HELPER FUNCTIONS
+function changeInputErrorBorder(input, classToAdd) {
+  const formInputErrorIcon = input.closest(".form__input-error-icon");
+  formInputErrorIcon.classList.add(classToAdd);
+}
+
 function displayError(input, errorMessage) {
   // Insert error icon
   const errorIconHTML = `<svg
@@ -31,8 +36,45 @@ function displayError(input, errorMessage) {
   formInputContainer.insertAdjacentHTML("beforeend", formErrorHTML);
 
   // Change border-bottom of 'form__input-error-icon to #ff6f5b
-  const formInputErrorIcon = input.closest(".form__input-error-icon");
-  formInputErrorIcon.classList.add("form__input-error-icon--error");
+  changeInputErrorBorder(input, "form__input-error-icon--error");
+}
+
+function isNameNotValid() {
+  const nameInput = formInputs[0];
+  const nameValue = nameInput.value.trim();
+  const isNotValid =
+    !/^[A-Za-z\-\'\s]+$/.test(nameValue) || nameValue.length > 50;
+  const isValid = !isNotValid;
+
+  if (isNotValid && nameValue !== "") {
+    displayError(nameInput, "Sorry, invalid format here");
+  }
+
+  if (isValid) {
+    // Change 'form__input-error-icon' border-bottom to #4ee1a0
+    changeInputErrorBorder(nameInput, "form__input-error-icon--success");
+  }
+
+  return isNotValid;
+}
+
+function isEmailNotValid() {
+  const emailInput = formInputs[1];
+  const emailValue = emailInput.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const isNotValid = !emailRegex.test(emailValue);
+  const isValid = !isNotValid;
+
+  if (isNotValid && emailValue !== "") {
+    displayError(emailInput, "Sorry, invalid format here");
+  }
+
+  if (isValid) {
+    // Change 'form__input-error-icon' border-bottom to #4ee1a0
+    changeInputErrorBorder(emailInput, "form__input-error-icon--success");
+  }
+
+  return isNotValid;
 }
 
 // EVENT LISTENER CALLBACK FUNCTION
@@ -53,22 +95,18 @@ form.addEventListener("submit", function (e) {
   for (let input of formInputs) {
     // Check if any of the inputs are empty
     if (input.value === "") displayError(input, "Sorry, can't be empty");
+
+    // If the message input is not empty, change its 'form__input-error-icon' border-bottom to #4ee1a0
+    const messageInput = formInputs[2];
+    const messageValue = messageInput.value.trim();
+
+    if (input === messageInput && messageValue !== "") {
+      changeInputErrorBorder(messageInput, "form__input-error-icon--success");
+    }
   }
 
-  // Check if name input value is not valid
-  const nameInput = formInputs[0];
-  const nameValue = nameInput.value;
-  const isNameNotValid =
-    !/^[A-Za-z\-\'\s]+$/.test(nameValue) || nameValue.length > 50;
-
-  if (isNameNotValid) {
-    displayError(nameInput, "Sorry, invalid format here");
-    return;
-  } else {
-    // If the name input value is valid, change 'form__input-error-icon' border-bottom to #4ee1a0
-    const formInputErrorIcon = nameInput.closest(".form__input-error-icon");
-    formInputErrorIcon.classList.add("form__input-error-icon--success");
-  }
+  // Do not submit the form if the name or email is not valid
+  if (isNameNotValid() || isEmailNotValid()) return;
 
   // After checking all inputs, prevent form submission if any input is empty
   for (let input of formInputs) {
