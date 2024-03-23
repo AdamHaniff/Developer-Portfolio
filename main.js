@@ -1,5 +1,5 @@
-// import "core-js/stable";
-// import "regenerator-runtime/runtime";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 // VARIABLES
 const contactMe = document.querySelectorAll('[href="#contact"]');
@@ -8,6 +8,36 @@ const form = document.querySelector(".form");
 const formInputs = document.querySelectorAll(".form__input");
 
 // HELPER FUNCTIONS
+function removeElements(elementsClass) {
+  const elements = document.querySelectorAll(elementsClass);
+
+  if (elements) {
+    for (let el of elements) {
+      el.remove();
+    }
+  }
+}
+
+function resetFormValidation() {
+  // If any 'form__error-icon' is currently being displayed, remove it
+  removeElements(".form__error-icon");
+
+  // Remove any dynamic classes added to 'form__input-error-icon' elements
+  const formInputErrorIconElements = document.querySelectorAll(
+    ".form__input-error-icon"
+  );
+
+  for (let el of formInputErrorIconElements) {
+    el.classList.remove(
+      "form__input-error-icon--error",
+      "form__input-error-icon--success"
+    );
+  }
+
+  // If any 'form__error' element is currently being displayed, remove it
+  removeElements(".form__error");
+}
+
 function changeInputErrorBorder(input, classToAdd) {
   const formInputErrorIcon = input.closest(".form__input-error-icon");
   formInputErrorIcon.classList.add(classToAdd);
@@ -30,13 +60,13 @@ function displayError(input, errorMessage) {
 
   input.insertAdjacentHTML("afterend", errorIconHTML);
 
+  // Change border-bottom of 'form__input-error-icon to #ff6f5b
+  changeInputErrorBorder(input, "form__input-error-icon--error");
+
   // Insert form error
   const formInputContainer = input.closest(".form__input-container");
   const formErrorHTML = `<span class="form__error">${errorMessage}</span>`;
   formInputContainer.insertAdjacentHTML("beforeend", formErrorHTML);
-
-  // Change border-bottom of 'form__input-error-icon to #ff6f5b
-  changeInputErrorBorder(input, "form__input-error-icon--error");
 }
 
 function isNameNotValid() {
@@ -77,39 +107,59 @@ function isEmailNotValid() {
   return isNotValid;
 }
 
-// EVENT LISTENER CALLBACK FUNCTION
-function scrollToContactSection(e) {
-  // Prevent the default behavior of the anchor link
-  e.preventDefault();
-  // Scroll smoothly to the contact section
-  contactSection.scrollIntoView({ behavior: "smooth" });
+function checkMessageValidity(input) {
+  // If the message input is not empty, change its 'form__input-error-icon' border-bottom to #4ee1a0
+  const messageInput = formInputs[2];
+  const messageValue = messageInput.value.trim();
+
+  if (input === messageInput && messageValue !== "") {
+    changeInputErrorBorder(messageInput, "form__input-error-icon--success");
+  }
 }
 
-// EVENT LISTENERS
-contactMe.forEach((el) => el.addEventListener("click", scrollToContactSection));
+function isAnyInputEmpty() {
+  for (let input of formInputs) {
+    if (input.value === "") return true;
+  }
+}
 
-form.addEventListener("submit", function (e) {
+// EVENT LISTENER CALLBACK FUNCTIONS
+function handleFormSubmit(e) {
   // Prevent default form submission behavior
   e.preventDefault();
+
+  // Remove any error elements and dynamic classes that were added
+  resetFormValidation();
 
   for (let input of formInputs) {
     // Check if any of the inputs are empty
     if (input.value === "") displayError(input, "Sorry, can't be empty");
 
-    // If the message input is not empty, change its 'form__input-error-icon' border-bottom to #4ee1a0
-    const messageInput = formInputs[2];
-    const messageValue = messageInput.value.trim();
-
-    if (input === messageInput && messageValue !== "") {
-      changeInputErrorBorder(messageInput, "form__input-error-icon--success");
-    }
+    // Check if the message is not an empty string
+    checkMessageValidity(input);
   }
 
   // Do not submit the form if the name or email is not valid
   if (isNameNotValid() || isEmailNotValid()) return;
 
   // After checking all inputs, prevent form submission if any input is empty
-  for (let input of formInputs) {
-    if (input.value === "") return;
-  }
-});
+  if (isAnyInputEmpty()) return;
+
+  // If all inputs are valid, submit the form
+  form.submit();
+
+  // Reset all input fields
+  form.reset();
+}
+
+function handleContactMeClick(e) {
+  // Prevent the default behavior of the anchor link
+  e.preventDefault();
+
+  // Scroll smoothly to the contact section
+  contactSection.scrollIntoView({ behavior: "smooth" });
+}
+
+// EVENT LISTENERS
+form.addEventListener("submit", handleFormSubmit);
+contactMe.forEach((el) => el.addEventListener("click", handleContactMeClick));
