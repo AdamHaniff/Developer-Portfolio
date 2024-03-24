@@ -7,7 +7,7 @@ const contactSection = document.querySelector(".contact");
 const form = document.querySelector(".form");
 const formInputs = document.querySelectorAll(".form__input");
 
-// HELPER FUNCTIONS
+// FUNCTIONS
 function removeElements(elementsClass) {
   const elements = document.querySelectorAll(elementsClass);
 
@@ -43,8 +43,7 @@ function changeInputErrorBorder(input, classToAdd) {
   formInputErrorIcon.classList.add(classToAdd);
 }
 
-function displayError(input, errorMessage) {
-  // Insert error icon
+function insertErrorIcon(input) {
   const errorIconHTML = `<svg
   class="form__error-icon"
   xmlns="http://www.w3.org/2000/svg"
@@ -59,14 +58,35 @@ function displayError(input, errorMessage) {
 </svg>`;
 
   input.insertAdjacentHTML("afterend", errorIconHTML);
+}
+
+function insertFormError(input, errorMessage) {
+  const formInputContainer = input.closest(".form__input-container");
+  const formErrorHTML = `<span class="form__error">${errorMessage}</span>`;
+  formInputContainer.insertAdjacentHTML("beforeend", formErrorHTML);
+}
+
+function displayError(input, errorMessage) {
+  insertErrorIcon(input);
 
   // Change border-bottom of 'form__input-error-icon to #ff6f5b
   changeInputErrorBorder(input, "form__input-error-icon--error");
 
-  // Insert form error
-  const formInputContainer = input.closest(".form__input-container");
-  const formErrorHTML = `<span class="form__error">${errorMessage}</span>`;
-  formInputContainer.insertAdjacentHTML("beforeend", formErrorHTML);
+  // Create error message and insert it
+  insertFormError(input, errorMessage);
+}
+
+function validateInput(isNotValid, isValid, input, inputValue) {
+  if (isNotValid && inputValue !== "") {
+    displayError(input, "Sorry, invalid format here");
+  }
+
+  if (isValid) {
+    // Change 'form__input-error-icon' border-bottom to #4ee1a0
+    changeInputErrorBorder(input, "form__input-error-icon--success");
+  }
+
+  return isNotValid;
 }
 
 function isNameNotValid() {
@@ -76,16 +96,8 @@ function isNameNotValid() {
     !/^[A-Za-z\-\'\s]+$/.test(nameValue) || nameValue.length > 50;
   const isValid = !isNotValid;
 
-  if (isNotValid && nameValue !== "") {
-    displayError(nameInput, "Sorry, invalid format here");
-  }
-
-  if (isValid) {
-    // Change 'form__input-error-icon' border-bottom to #4ee1a0
-    changeInputErrorBorder(nameInput, "form__input-error-icon--success");
-  }
-
-  return isNotValid;
+  // Display error or success depending on the validity of name input
+  return validateInput(isNotValid, isValid, nameInput, nameValue);
 }
 
 function isEmailNotValid() {
@@ -95,16 +107,8 @@ function isEmailNotValid() {
   const isNotValid = !emailRegex.test(emailValue);
   const isValid = !isNotValid;
 
-  if (isNotValid && emailValue !== "") {
-    displayError(emailInput, "Sorry, invalid format here");
-  }
-
-  if (isValid) {
-    // Change 'form__input-error-icon' border-bottom to #4ee1a0
-    changeInputErrorBorder(emailInput, "form__input-error-icon--success");
-  }
-
-  return isNotValid;
+  // Display error or success depending on the validity of email input
+  return validateInput(isNotValid, isValid, emailInput, emailValue);
 }
 
 function checkMessageValidity(input) {
@@ -140,7 +144,12 @@ function handleFormSubmit(e) {
   }
 
   // Do not submit the form if the name or email is not valid
-  if (isNameNotValid() || isEmailNotValid()) return;
+  if (isNameNotValid()) {
+    isEmailNotValid();
+    return;
+  }
+
+  if (isEmailNotValid()) return;
 
   // After checking all inputs, prevent form submission if any input is empty
   if (isAnyInputEmpty()) return;
