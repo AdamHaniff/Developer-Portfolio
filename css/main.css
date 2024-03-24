@@ -346,6 +346,23 @@ body {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 23.375em) {
+  .about-me__header {
+    font-size: 3.6rem;
+  }
+  .about-me__email:link, .about-me__email:visited {
+    font-size: 1.55rem;
+  }
+  .projects-header__title {
+    font-size: 3.6rem;
+  }
+  .project__name {
+    font-size: 2rem;
+  }
+  .project__technology {
+    font-size: 1.6rem;
+  }
+}
 .form__input-error-icon--error {
   border-bottom: 0.1rem solid #ff6f5b;
 }

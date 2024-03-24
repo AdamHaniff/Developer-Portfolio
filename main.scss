@@ -422,6 +422,39 @@ body {
   margin: 0 auto;
 }
 
+// ********* 320px - 374px LAYOUT *********
+@media only screen and (max-width: 23.375em) {
+  // ************** ABOUT-ME **************
+  .about-me {
+    &__header {
+      font-size: 3.6rem;
+    }
+
+    &__email:link,
+    &__email:visited {
+      font-size: 1.55rem;
+    }
+  }
+
+  // ************** PROJECTS **************
+  .projects {
+    &-header__title {
+      font-size: 3.6rem;
+    }
+  }
+
+  // ************** PROJECT **************
+  .project {
+    &__name {
+      font-size: 2rem;
+    }
+
+    &__technology {
+      font-size: 1.6rem;
+    }
+  }
+}
+
 // *** CLASSES USED WITH JAVASCRIPT ***
 
 // *************** FORM ***************
