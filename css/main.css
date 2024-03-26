@@ -65,6 +65,9 @@ body {
 
 .about-me {
   margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .about-me__img-background {
   background: linear-gradient(180deg, rgba(36, 36, 36, 0) 0.65%, #242424 100%);
@@ -81,9 +84,10 @@ body {
   width: 17.4rem;
   height: auto;
   filter: grayscale(100%);
-  margin: 0 auto 4rem;
+  margin-bottom: 4rem;
 }
 .about-me__text {
+  max-width: 34.3rem;
   text-align: center;
 }
 .about-me__header {
@@ -185,11 +189,14 @@ body {
 .projects {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4rem;
   border-top: 0.1rem solid #ffffff;
   padding: 8rem 0;
 }
 .projects-header {
+  max-width: 34.3rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
