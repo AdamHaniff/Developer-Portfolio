@@ -53,7 +53,7 @@ body {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 3.2rem;
-  letter-spacing: 0.0333rem;
+  letter-spacing: -0.0333rem;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
@@ -243,6 +243,9 @@ body {
 }
 
 .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #242424;
   margin: 0 -1.6rem;
   padding: 6rem 1.6rem 8.7rem;
@@ -253,7 +256,9 @@ body {
   flex-direction: column;
   gap: 2rem;
   text-align: center;
+  align-items: center;
   margin-bottom: 5rem;
+  max-width: 34.3rem;
 }
 .contact__header {
   font-size: 4rem;
@@ -274,6 +279,8 @@ body {
   gap: 3.2rem;
   position: relative;
   z-index: 3;
+  max-width: 34.3rem;
+  width: 100%;
 }
 .form__input-container {
   display: flex;
@@ -368,6 +375,44 @@ body {
   }
   .project__technology {
     font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 35.75em) {
+  body {
+    padding: 0;
+  }
+  .header-footer {
+    width: initial;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: initial;
+    margin: 2.2rem auto 6.7rem;
+    padding: 0 2.2rem;
+  }
+  .header-footer__name:link, .header-footer__name:visited {
+    font-size: 2.8rem;
+    letter-spacing: -0.03885rem;
+    text-align: initial;
+  }
+  .header-footer__socials {
+    gap: initial;
+    width: 17.4rem;
+    justify-content: space-between;
+  }
+  .about-me {
+    margin-bottom: 7rem;
+    flex-direction: row;
+    align-items: initial;
+  }
+  .about-me__img-background {
+    background: #242424;
+    width: 24rem;
+    left: initial;
+    right: 0;
+    transform: initial;
+  }
+  .about-me__img {
+    order: 1;
   }
 }
 .form__input-error-icon--error {
