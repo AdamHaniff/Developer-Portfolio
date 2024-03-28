@@ -562,6 +562,104 @@ body {
       top: 46.4rem;
     }
   }
+
+  // *************** SKILLS ***************
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.8rem 9rem;
+    padding: 4.6rem 0 7rem;
+
+    &__container {
+      align-items: initial;
+      gap: 1.2rem;
+    }
+
+    &__name-icon {
+      gap: 1.2rem;
+    }
+
+    &__name {
+      font-size: 3.4rem;
+      line-height: 4.25rem;
+      letter-spacing: -0.105rem;
+    }
+
+    &__experience {
+      font-size: 1.7rem;
+      line-height: 2.7rem;
+    }
+
+    &__rings-container {
+      transform: initial;
+      right: -2.2rem;
+      bottom: 0;
+    }
+  }
+
+  // ************** PROJECTS **************
+  .projects {
+    border-top: initial;
+    margin-top: 2.6rem;
+    padding: 0 0 7.4rem;
+    gap: 5rem;
+
+    &-header {
+      max-width: 52.875rem;
+
+      &__title {
+        font-size: 5.6rem;
+        line-height: 5.6rem;
+        letter-spacing: -0.15905rem;
+      }
+    }
+  }
+
+  // *************** CONTACT ***************
+  .contact {
+    margin: 0 -2.2rem;
+    padding: 6rem 0 8.95rem;
+
+    &__text-container {
+      margin-bottom: 4.9rem;
+      max-width: 39.4rem;
+    }
+
+    &__header {
+      font-size: 5.6rem;
+      line-height: 5.6rem;
+      letter-spacing: -0.15905rem;
+    }
+
+    &__text {
+      font-size: 1.7rem;
+      line-height: 2.7rem;
+    }
+  }
+
+  // **************** FORM ****************
+  .form {
+    max-width: 39.4rem;
+
+    &__rings {
+      top: initial;
+      bottom: 1.5rem;
+    }
+  }
+
+  // *************** FOOTER ***************
+  .footer {
+    margin: 0 -2.2rem;
+    padding: 0 2.2rem 3rem;
+
+    &__border {
+      margin-bottom: 2.2rem;
+    }
+
+    .centered {
+      margin: 0 auto;
+    }
+  }
 }
 // *** CLASSES USED WITH JAVASCRIPT ***
 

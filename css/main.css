@@ -451,6 +451,81 @@ body {
   .about-me__circle-container {
     top: 46.4rem;
   }
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.8rem 9rem;
+    padding: 4.6rem 0 7rem;
+  }
+  .skills__container {
+    align-items: initial;
+    gap: 1.2rem;
+  }
+  .skills__name-icon {
+    gap: 1.2rem;
+  }
+  .skills__name {
+    font-size: 3.4rem;
+    line-height: 4.25rem;
+    letter-spacing: -0.105rem;
+  }
+  .skills__experience {
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+  }
+  .skills__rings-container {
+    transform: initial;
+    right: -2.2rem;
+    bottom: 0;
+  }
+  .projects {
+    border-top: initial;
+    margin-top: 2.6rem;
+    padding: 0 0 7.4rem;
+    gap: 5rem;
+  }
+  .projects-header {
+    max-width: 52.875rem;
+  }
+  .projects-header__title {
+    font-size: 5.6rem;
+    line-height: 5.6rem;
+    letter-spacing: -0.15905rem;
+  }
+  .contact {
+    margin: 0 -2.2rem;
+    padding: 6rem 0 8.95rem;
+  }
+  .contact__text-container {
+    margin-bottom: 4.9rem;
+    max-width: 39.4rem;
+  }
+  .contact__header {
+    font-size: 5.6rem;
+    line-height: 5.6rem;
+    letter-spacing: -0.15905rem;
+  }
+  .contact__text {
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+  }
+  .form {
+    max-width: 39.4rem;
+  }
+  .form__rings {
+    top: initial;
+    bottom: 1.5rem;
+  }
+  .footer {
+    margin: 0 -2.2rem;
+    padding: 0 2.2rem 3rem;
+  }
+  .footer__border {
+    margin-bottom: 2.2rem;
+  }
+  .footer .centered {
+    margin: 0 auto;
+  }
 }
 .form__input-error-icon--error {
   border-bottom: 0.1rem solid #ff6f5b;
