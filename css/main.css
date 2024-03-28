@@ -79,12 +79,14 @@ body {
   transform: translateX(-50%);
   z-index: -1;
 }
+.about-me__img-container {
+  margin-bottom: 4rem;
+}
 .about-me__img {
   display: block;
   width: 17.4rem;
   height: auto;
   filter: grayscale(100%);
-  margin-bottom: 4rem;
 }
 .about-me__text {
   max-width: 34.3rem;
@@ -379,7 +381,7 @@ body {
 }
 @media only screen and (min-width: 35.75em) {
   body {
-    padding: 0;
+    padding: 0 2.2rem;
   }
   .header-footer {
     width: initial;
@@ -387,7 +389,6 @@ body {
     justify-content: space-between;
     gap: initial;
     margin: 2.2rem auto 6.7rem;
-    padding: 0 2.2rem;
   }
   .header-footer__name:link, .header-footer__name:visited {
     font-size: 2.8rem;
@@ -406,13 +407,49 @@ body {
   }
   .about-me__img-background {
     background: #242424;
-    width: 24rem;
+    width: 23rem;
     left: initial;
     right: 0;
     transform: initial;
   }
+  .about-me__img-container {
+    width: 23rem;
+    height: 49.9rem;
+    position: absolute;
+    top: 9.5rem;
+    right: 0;
+    overflow-x: hidden;
+    margin-bottom: initial;
+  }
   .about-me__img {
-    order: 1;
+    width: auto;
+    height: 49.9rem;
+    transform: translateX(-4rem);
+  }
+  .about-me__text {
+    max-width: 31rem;
+    text-align: initial;
+  }
+  .about-me__header {
+    font-size: 5.2rem;
+    line-height: 5.2rem;
+    letter-spacing: -0.15905rem;
+    margin-bottom: 4rem;
+  }
+  .about-me__name {
+    border-bottom: 0.5rem solid #4ee1a0;
+  }
+  .about-me__info {
+    margin-bottom: 3rem;
+  }
+  .about-me__email-container {
+    margin-bottom: 3rem;
+  }
+  .about-me__rings {
+    top: 6.4rem;
+  }
+  .about-me__circle-container {
+    top: 46.4rem;
   }
 }
 .form__input-error-icon--error {

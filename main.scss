@@ -110,12 +110,15 @@ body {
     z-index: -1;
   }
 
+  &__img-container {
+    margin-bottom: 4rem;
+  }
+
   &__img {
     display: block;
     width: 17.4rem;
     height: auto;
     filter: grayscale(100%);
-    margin-bottom: 4rem;
   }
 
   &__text {
@@ -472,7 +475,7 @@ body {
 // ************* 572px LAYOUT *************
 @media only screen and (min-width: 35.75em) {
   body {
-    padding: 0;
+    padding: 0 2.2rem;
   }
 
   // *************** HEADER ***************
@@ -482,7 +485,6 @@ body {
     justify-content: space-between;
     gap: initial;
     margin: 2.2rem auto 6.7rem;
-    padding: 0 2.2rem;
 
     &__name:link,
     &__name:visited {
@@ -506,14 +508,58 @@ body {
 
     &__img-background {
       background: $color-dark-jungle-green;
-      width: 24rem;
+      width: 23rem;
       left: initial;
       right: 0;
       transform: initial;
     }
 
+    &__img-container {
+      width: 23rem;
+      height: 49.9rem;
+      position: absolute;
+      top: 9.5rem;
+      right: 0;
+      overflow-x: hidden;
+      margin-bottom: initial;
+    }
+
     &__img {
-      order: 1;
+      width: auto;
+      height: 49.9rem;
+      transform: translateX(-4rem);
+    }
+
+    &__text {
+      max-width: 31rem;
+      text-align: initial;
+    }
+
+    &__header {
+      font-size: 5.2rem;
+      line-height: 5.2rem;
+      letter-spacing: -0.15905rem;
+      margin-bottom: 4rem;
+    }
+
+    &__name {
+      border-bottom: 0.5rem solid $color-medium-aquamarine;
+    }
+
+    &__info {
+      margin-bottom: 3rem;
+    }
+
+    &__email-container {
+      margin-bottom: 3rem;
+    }
+
+    &__rings {
+      top: 6.4rem;
+    }
+
+    &__circle-container {
+      top: 46.4rem;
     }
   }
 }
