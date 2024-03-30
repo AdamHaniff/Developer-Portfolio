@@ -197,7 +197,6 @@ body {
   padding: 8rem 0;
 }
 .projects-header {
-  max-width: 34.3rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -418,12 +417,12 @@ body {
     position: absolute;
     top: 9.5rem;
     right: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     margin-bottom: initial;
   }
   .about-me__img {
     width: auto;
-    height: 49.9rem;
+    height: 100%;
     transform: translateX(-4rem);
   }
   .about-me__text {
@@ -484,9 +483,6 @@ body {
     padding: 0 0 7.4rem;
     gap: 5rem;
   }
-  .projects-header {
-    max-width: 52.875rem;
-  }
   .projects-header__title {
     font-size: 5.6rem;
     line-height: 5.6rem;
@@ -525,6 +521,37 @@ body {
   }
   .footer .centered {
     margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 42em) {
+  .about-me__img-background {
+    width: 30rem;
+  }
+  .about-me__img-container {
+    width: 30rem;
+  }
+  .about-me__img {
+    transform: initial;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .about-me__text {
+    max-width: 34rem;
+  }
+}
+@media only screen and (min-width: 45em) {
+  .about-me__text {
+    max-width: 40rem;
+  }
+  .about-me__img-container {
+    height: 47.2rem;
+  }
+  .about-me__img {
+    height: 49.9rem;
+  }
+  .about-me__circle-container {
+    top: 43.8rem;
   }
 }
 .form__input-error-icon--error {

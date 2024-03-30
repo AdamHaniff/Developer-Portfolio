@@ -250,7 +250,6 @@ body {
   padding: 8rem 0;
 
   &-header {
-    max-width: 34.3rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -520,13 +519,13 @@ body {
       position: absolute;
       top: 9.5rem;
       right: 0;
-      overflow-x: hidden;
+      overflow: hidden;
       margin-bottom: initial;
     }
 
     &__img {
       width: auto;
-      height: 49.9rem;
+      height: 100%;
       transform: translateX(-4rem);
     }
 
@@ -604,14 +603,10 @@ body {
     padding: 0 0 7.4rem;
     gap: 5rem;
 
-    &-header {
-      max-width: 52.875rem;
-
-      &__title {
-        font-size: 5.6rem;
-        line-height: 5.6rem;
-        letter-spacing: -0.15905rem;
-      }
+    &-header__title {
+      font-size: 5.6rem;
+      line-height: 5.6rem;
+      letter-spacing: -0.15905rem;
     }
   }
 
@@ -661,6 +656,57 @@ body {
     }
   }
 }
+
+// ************** 672px LAYOUT *************
+@media only screen and (min-width: 42em) {
+  // ************** ABOUT-ME **************
+  .about-me {
+    &__img-background {
+      width: 30rem;
+    }
+
+    &__img-container {
+      width: 30rem;
+    }
+
+    &__img {
+      transform: initial;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__text {
+      max-width: 34rem;
+    }
+  }
+}
+
+// ************** 720px LAYOUT **************
+@media only screen and (min-width: 45em) {
+  // *************** ABOUT-ME ***************
+  .about-me {
+    &__text {
+      max-width: 40rem;
+    }
+
+    &__img-container {
+      height: 47.2rem;
+    }
+
+    &__img {
+      height: 49.9rem;
+    }
+
+    &__circle-container {
+      top: 43.8rem;
+    }
+  }
+}
+
+// ************** 768px LAYOUT **************
+@media only screen and (min-width: 48em) {
+}
+
 // *** CLASSES USED WITH JAVASCRIPT ***
 
 // *************** FORM ***************
