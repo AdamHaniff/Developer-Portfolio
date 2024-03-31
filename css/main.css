@@ -554,6 +554,109 @@ body {
     top: 43.8rem;
   }
 }
+@media only screen and (min-width: 48em) {
+  body {
+    padding: 0 3rem;
+  }
+  .header-footer {
+    margin: 2.9rem auto 9rem;
+  }
+  .header-footer__name:link, .header-footer__name:visited {
+    font-size: 3.2rem;
+    letter-spacing: -0.0444rem;
+  }
+  .header-footer__socials {
+    width: 19.2rem;
+  }
+  .about-me {
+    margin-bottom: 6rem;
+  }
+  .about-me__img-background {
+    width: 32.2rem;
+  }
+  .about-me__img-container {
+    width: 32.2rem;
+    height: 55.4rem;
+    top: 12.7rem;
+  }
+  .about-me__img {
+    height: 100%;
+  }
+  .about-me__header {
+    font-size: 6.8rem;
+    line-height: 6.8rem;
+    letter-spacing: -0.2045rem;
+    margin-bottom: 5.6rem;
+  }
+  .about-me__name {
+    border-bottom: 0.6rem solid #4ee1a0;
+  }
+  .about-me__info {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 3.4rem;
+  }
+  .about-me__email-container {
+    margin-bottom: 3.4rem;
+  }
+  .about-me__email-icon-link {
+    transform: translateY(0.1rem);
+  }
+  .about-me__email:link, .about-me__email:visited {
+    font-size: 1.8rem;
+  }
+  .about-me__rings {
+    top: 8.6rem;
+    left: -26.4rem;
+  }
+  .about-me__circle-container {
+    top: 55.1rem;
+  }
+  .skills {
+    padding: 5.2rem 0 10rem;
+    gap: 5.2rem 12.1rem;
+  }
+  .skills__container {
+    gap: 1.4rem;
+  }
+  .skills__name-icon {
+    gap: 1.4rem;
+  }
+  .skills__name {
+    font-size: 4.6rem;
+    line-height: 5.3rem;
+    letter-spacing: -0.14rem;
+  }
+  .skills__experience {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  .skills__rings-container {
+    width: 19.8rem;
+    right: -3rem;
+    bottom: initial;
+    top: 38.6rem;
+  }
+  .projects {
+    margin-top: initial;
+    padding: 0 0 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem 2rem;
+  }
+  .projects-header {
+    grid-column: span 2;
+  }
+  .projects-header__title {
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+    letter-spacing: -0.2045rem;
+  }
+  .projects .project:last-child {
+    grid-column: span 2;
+    justify-self: center;
+  }
+}
 .form__input-error-icon--error {
   border-bottom: 0.1rem solid #ff6f5b;
 }
