@@ -669,6 +669,24 @@ body {
     line-height: 7.2rem;
     letter-spacing: -0.2045rem;
   }
+  .contact__text {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  .form {
+    max-width: 44.5rem;
+  }
+  .form__rings {
+    left: -36.8rem;
+    bottom: 2.7rem;
+  }
+  .footer {
+    margin: 0 -3rem;
+    padding: 0 3rem 4rem;
+  }
+  .footer__border {
+    margin-bottom: 3rem;
+  }
 }
 .form__input-error-icon--error {
   border-bottom: 0.1rem solid #ff6f5b;

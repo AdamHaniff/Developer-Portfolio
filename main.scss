@@ -853,6 +853,31 @@ body {
       line-height: 7.2rem;
       letter-spacing: -0.2045rem;
     }
+
+    &__text {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  // ***************** FORM *****************
+  .form {
+    max-width: 44.5rem;
+
+    &__rings {
+      left: -36.8rem;
+      bottom: 2.7rem;
+    }
+  }
+
+  // **************** FOOTER ****************
+  .footer {
+    margin: 0 -3rem;
+    padding: 0 3rem 4rem;
+
+    &__border {
+      margin-bottom: 3rem;
+    }
   }
 }
 
