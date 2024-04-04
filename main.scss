@@ -834,8 +834,12 @@ body {
 
     & .project:last-child {
       grid-column: span 2;
-      justify-self: center;
     }
+  }
+
+  // **************** PROJECT ****************
+  .project {
+    justify-self: center;
   }
 
   // **************** CONTACT ****************
@@ -879,6 +883,53 @@ body {
       margin-bottom: 3rem;
     }
   }
+}
+
+// ************** 900px LAYOUT **************
+@media only screen and (min-width: 56.25em) {
+  // *************** ABOUT-ME ***************
+  .about-me {
+    &__img-background {
+      width: 40rem;
+    }
+
+    &__img-container {
+      width: 40rem;
+    }
+
+    &__img {
+      height: 65rem;
+    }
+  }
+}
+
+// ************** 1000px LAYOUT **************
+@media only screen and (min-width: 62.5em) {
+  .about-me {
+    &__img-container {
+      height: 48.7rem;
+    }
+
+    &__text {
+      max-width: initial;
+    }
+
+    &__header {
+      max-width: 60rem;
+    }
+
+    &__info {
+      max-width: 44.5rem;
+    }
+
+    &__circle-container {
+      top: 48.5rem;
+    }
+  }
+}
+
+// ************** 1104px LAYOUT *************
+@media only screen and (min-width: 69em) {
 }
 
 // *** CLASSES USED WITH JAVASCRIPT ***

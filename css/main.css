@@ -654,6 +654,8 @@ body {
   }
   .projects .project:last-child {
     grid-column: span 2;
+  }
+  .project {
     justify-self: center;
   }
   .contact {
@@ -686,6 +688,34 @@ body {
   }
   .footer__border {
     margin-bottom: 3rem;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .about-me__img-background {
+    width: 40rem;
+  }
+  .about-me__img-container {
+    width: 40rem;
+  }
+  .about-me__img {
+    height: 65rem;
+  }
+}
+@media only screen and (min-width: 62.5em) {
+  .about-me__img-container {
+    height: 48.7rem;
+  }
+  .about-me__text {
+    max-width: initial;
+  }
+  .about-me__header {
+    max-width: 60rem;
+  }
+  .about-me__info {
+    max-width: 44.5rem;
+  }
+  .about-me__circle-container {
+    top: 48.5rem;
   }
 }
 .form__input-error-icon--error {
