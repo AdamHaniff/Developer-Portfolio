@@ -718,6 +718,52 @@ body {
     top: 48.5rem;
   }
 }
+@media only screen and (min-width: 69em) {
+  body {
+    padding: 0 12.6rem;
+  }
+  .header-footer {
+    margin: 2.9rem auto 9.7rem;
+  }
+  .header-footer__socials {
+    transform: translateX(-3rem);
+  }
+  .about-me {
+    margin-bottom: 7.9rem;
+  }
+  .about-me__img-background {
+    right: 12.6rem;
+    width: 34.1rem;
+  }
+  .about-me__img-container {
+    width: 34.1rem;
+    height: 60.5rem;
+    top: 10.8rem;
+    right: 12.6rem;
+  }
+  .about-me__img {
+    height: 100%;
+  }
+  .about-me__header {
+    max-width: 54.3rem;
+    margin-bottom: 4.85rem;
+  }
+  .about-me__info {
+    margin-bottom: 5rem;
+  }
+  .about-me__email-container {
+    margin-bottom: 5rem;
+  }
+  .about-me__rings {
+    top: 10.1rem;
+    left: -10rem;
+  }
+  .about-me__circle-container {
+    width: initial;
+    right: 40.2rem;
+    top: 53rem;
+  }
+}
 .form__input-error-icon--error {
   border-bottom: 0.1rem solid #ff6f5b;
 }

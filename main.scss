@@ -930,6 +930,63 @@ body {
 
 // ************** 1104px LAYOUT *************
 @media only screen and (min-width: 69em) {
+  body {
+    padding: 0 12.6rem;
+  }
+
+  // **************** HEADER ****************
+  .header-footer {
+    margin: 2.9rem auto 9.7rem;
+
+    &__socials {
+      transform: translateX(-3rem);
+    }
+  }
+
+  // *************** ABOUT-ME ***************
+  .about-me {
+    margin-bottom: 7.9rem;
+
+    &__img-background {
+      right: 12.6rem;
+      width: 34.1rem;
+    }
+
+    &__img-container {
+      width: 34.1rem;
+      height: 60.5rem;
+      top: 10.8rem;
+      right: 12.6rem;
+    }
+
+    &__img {
+      height: 100%;
+    }
+
+    &__header {
+      max-width: 54.3rem;
+      margin-bottom: 4.85rem;
+    }
+
+    &__info {
+      margin-bottom: 5rem;
+    }
+
+    &__email-container {
+      margin-bottom: 5rem;
+    }
+
+    &__rings {
+      top: 10.1rem;
+      left: -10rem;
+    }
+
+    &__circle-container {
+      width: initial;
+      right: 40.2rem;
+      top: 53rem;
+    }
+  }
 }
 
 // *** CLASSES USED WITH JAVASCRIPT ***
