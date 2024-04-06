@@ -763,6 +763,57 @@ body {
     right: 40.2rem;
     top: 53rem;
   }
+  .skills {
+    padding: 5.52rem 0 10.7rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4.4rem 7.2rem;
+  }
+  .skills__name {
+    font-size: 4rem;
+  }
+  .skills__rings-container {
+    width: 29.1rem;
+    right: -12.6rem;
+    top: 25.2rem;
+  }
+  .projects {
+    padding: 0 0 10.6rem;
+    gap: 7rem 2.2rem;
+  }
+  .projects-header__title {
+    font-size: 8rem;
+    line-height: 8rem;
+    letter-spacing: -0.22725rem;
+  }
+  .project__img-container {
+    max-width: 44.5rem;
+  }
+  .contact {
+    margin: 0 -12.6rem;
+    padding: 6.4rem 12.6rem 7rem;
+    flex-direction: row;
+    align-items: initial;
+    gap: 14rem;
+  }
+  .contact__text-container {
+    max-width: 39.4rem;
+    margin-bottom: initial;
+    gap: 2.8rem;
+    text-align: initial;
+    align-items: initial;
+  }
+  .contact__header {
+    font-size: 8rem;
+    line-height: 8rem;
+    letter-spacing: -0.22725rem;
+  }
+  .contact__text {
+    font-size: 1.7rem;
+  }
+  .form__rings {
+    left: -20.5rem;
+    bottom: 1.3rem;
+  }
 }
 .form__input-error-icon--error {
   border-bottom: 0.1rem solid #ff6f5b;

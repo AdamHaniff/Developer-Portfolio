@@ -987,6 +987,77 @@ body {
       top: 53rem;
     }
   }
+
+  // **************** SKILLS ****************
+  .skills {
+    padding: 5.52rem 0 10.7rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4.4rem 7.2rem;
+
+    &__name {
+      font-size: 4rem;
+    }
+
+    &__rings-container {
+      width: 29.1rem;
+      right: -12.6rem;
+      top: 25.2rem;
+    }
+  }
+
+  // *************** PROJECTS ***************
+  .projects {
+    padding: 0 0 10.6rem;
+    gap: 7rem 2.2rem;
+
+    &-header__title {
+      font-size: 8rem;
+      line-height: 8rem;
+      letter-spacing: -0.22725rem;
+    }
+  }
+
+  // **************** PROJECT ****************
+  .project {
+    &__img-container {
+      max-width: 44.5rem;
+    }
+  }
+
+  // **************** CONTACT ****************
+  .contact {
+    margin: 0 -12.6rem;
+    padding: 6.4rem 12.6rem 7rem;
+    flex-direction: row;
+    align-items: initial;
+    gap: 14rem;
+
+    &__text-container {
+      max-width: 39.4rem;
+      margin-bottom: initial;
+      gap: 2.8rem;
+      text-align: initial;
+      align-items: initial;
+    }
+
+    &__header {
+      font-size: 8rem;
+      line-height: 8rem;
+      letter-spacing: -0.22725rem;
+    }
+
+    &__text {
+      font-size: 1.7rem;
+    }
+  }
+
+  // ****************** FORM ****************
+  .form {
+    &__rings {
+      left: -20.5rem;
+      bottom: 1.3rem;
+    }
+  }
 }
 
 // *** CLASSES USED WITH JAVASCRIPT ***
