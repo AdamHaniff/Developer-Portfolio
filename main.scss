@@ -938,7 +938,7 @@ body {
   .header-footer {
     margin: 2.9rem auto 9.7rem;
 
-    &__socials {
+    header &__socials {
       transform: translateX(-3rem);
     }
   }
@@ -1053,9 +1053,74 @@ body {
 
   // ****************** FORM ****************
   .form {
+    margin-left: auto;
+
     &__rings {
       left: -20.5rem;
       bottom: 1.3rem;
+    }
+  }
+
+  // ***************** FOOTER ****************
+  .footer {
+    margin: 0 -12.6rem;
+    padding: 0 12.6rem 7rem;
+
+    &__border {
+      margin-bottom: 3.6rem;
+    }
+  }
+}
+
+// ************** 1272px LAYOUT **************
+@media only screen and (min-width: 79.5em) {
+  // *************** ABOUT-ME ***************
+  .about-me {
+    &__img-background {
+      width: 37rem;
+    }
+
+    &__img-container {
+      width: 37rem;
+      height: 55.7rem;
+    }
+
+    &__img {
+      width: 110%;
+      transform: translateX(-3.5rem);
+      height: 67rem;
+    }
+
+    &__header {
+      max-width: 63rem;
+      font-size: 7.8rem;
+      line-height: 7.8rem;
+      letter-spacing: -0.225rem;
+    }
+
+    &__circle-container {
+      right: 43.2rem;
+      top: 42.7rem;
+    }
+  }
+
+  // **************** CONTACT ***************
+  .contact {
+    gap: initial;
+
+    &__text-container {
+      max-width: 44.5rem;
+    }
+
+    &__text {
+      font-size: 1.8rem;
+    }
+  }
+
+  // ****************** FORM *****************
+  .form {
+    &__rings {
+      bottom: 1.1rem;
     }
   }
 }
