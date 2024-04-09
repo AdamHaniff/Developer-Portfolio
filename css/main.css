@@ -842,7 +842,7 @@ body {
     max-width: 63rem;
     font-size: 7.8rem;
     line-height: 7.8rem;
-    letter-spacing: -0.225rem;
+    letter-spacing: -0.25rem;
   }
   .about-me__circle-container {
     right: 43.2rem;
@@ -859,6 +859,48 @@ body {
   }
   .form__rings {
     bottom: 1.1rem;
+  }
+}
+@media only screen and (min-width: 90em) {
+  body {
+    padding: 0 16.5rem;
+  }
+  .header-footer {
+    margin: 3.9rem auto 12.7rem;
+  }
+  .about-me {
+    margin-bottom: 10.4rem;
+  }
+  .about-me__img-background {
+    width: 44.5rem;
+    right: 16.5rem;
+  }
+  .about-me__img-container {
+    width: 44.5rem;
+    height: 58.4rem;
+    top: 14.1rem;
+    right: 16.5rem;
+  }
+  .about-me__img {
+    transform: translate(-4.2rem);
+    height: 79rem;
+  }
+  .about-me__header {
+    margin-bottom: 3.7rem;
+  }
+  .about-me__info {
+    margin-bottom: 6.6rem;
+  }
+  .about-me__email-container {
+    margin-bottom: 6.6rem;
+    gap: 1.4rem;
+  }
+  .about-me__rings {
+    top: 13.3rem;
+  }
+  .about-me__circle-container {
+    right: 54.5rem;
+    top: 51rem;
   }
 }
 .form__input-error-icon--error {

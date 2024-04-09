@@ -1095,7 +1095,7 @@ body {
       max-width: 63rem;
       font-size: 7.8rem;
       line-height: 7.8rem;
-      letter-spacing: -0.225rem;
+      letter-spacing: -0.25rem;
     }
 
     &__circle-container {
@@ -1121,6 +1121,62 @@ body {
   .form {
     &__rings {
       bottom: 1.1rem;
+    }
+  }
+}
+
+// ************** 1440px LAYOUT **************
+@media only screen and (min-width: 90em) {
+  body {
+    padding: 0 16.5rem;
+  }
+
+  // ***************** HEADER *****************
+  .header-footer {
+    margin: 3.9rem auto 12.7rem;
+  }
+
+  // **************** ABOUT-ME ***************
+  .about-me {
+    margin-bottom: 10.4rem;
+
+    &__img-background {
+      width: 44.5rem;
+      right: 16.5rem;
+    }
+
+    &__img-container {
+      width: 44.5rem;
+      height: 58.4rem;
+      top: 14.1rem;
+      right: 16.5rem;
+    }
+
+    &__img {
+      transform: translate(-4.2rem);
+      height: 79rem;
+    }
+
+    &__header {
+      margin-bottom: 3.7rem;
+    }
+
+    &__info {
+      margin-bottom: 6.6rem;
+    }
+
+    &__email-container {
+      margin-bottom: 6.6rem;
+      gap: 1.4rem;
+    }
+
+    &__rings {
+      top: 13.3rem;
+    }
+
+    &__circle-container {
+      right: 54.5rem;
+      top: 51rem;
     }
   }
 }
