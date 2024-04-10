@@ -482,6 +482,7 @@ body {
     width: initial;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: initial;
     margin: 2.2rem auto 6.7rem;
 
@@ -1177,6 +1178,86 @@ body {
     &__circle-container {
       right: 54.5rem;
       top: 51rem;
+    }
+  }
+
+  // ****************** SKILLS *****************
+  .skills {
+    padding: 7.2rem 0 14rem;
+    gap: 5.8rem 9.5rem;
+
+    &__name {
+      font-size: 4.8rem;
+      line-height: 5.6rem;
+      letter-spacing: -0.15rem;
+    }
+
+    &__rings-container {
+      right: -16.5rem;
+    }
+  }
+
+  // **************** PROJECTS ****************
+  .projects {
+    padding: 0 0 13.9rem;
+    gap: 8rem 2.4rem;
+
+    &-header__title {
+      font-size: 8.8rem;
+      line-height: 8.8rem;
+      letter-spacing: -0.25rem;
+    }
+
+    & .project:last-child {
+      margin-top: -1.1rem;
+    }
+  }
+
+  // ***************** PROJECT *****************
+  .project {
+    &__img-container {
+      max-width: 54.5rem;
+    }
+
+    &__technologies {
+      margin-bottom: initial;
+    }
+
+    &__action-texts {
+      display: none;
+    }
+  }
+
+  // ***************** CONTACT *****************
+  .contact {
+    margin: 0 -16.5rem;
+    padding: 8.4rem 16.5rem 9.2rem;
+
+    &__text-container {
+      gap: 3.6rem;
+    }
+
+    &__header {
+      font-size: 8.8rem;
+      line-height: 8.8rem;
+      letter-spacing: -0.25rem;
+    }
+  }
+
+  // ******************* FORM ******************
+  .form {
+    &__rings {
+      bottom: 1.5rem;
+    }
+  }
+
+  // ****************** FOOTER *****************
+  .footer {
+    margin: 0 -16.5rem;
+    padding: 0 16.5rem 9.2rem;
+
+    &__border {
+      margin-bottom: 4.7rem;
     }
   }
 }
