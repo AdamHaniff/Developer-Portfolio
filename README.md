@@ -7,4 +7,4 @@ Users should be able to:
 • See hover and focus states for all interactive elements on the page  
 • Receive an error message when the `form` is submitted if:  
 &nbsp;&nbsp;• Any field is empty  
-&nbsp;&nbsp;• The email address is not formatted correctly
+&nbsp;&nbsp;• The name or email address is not formatted correctly

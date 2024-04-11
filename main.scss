@@ -1132,6 +1132,12 @@ body {
     padding: 0 16.5rem;
   }
 
+  .container {
+    max-width: 109.364rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
   // ***************** HEADER *****************
   .header-footer {
     margin: 3.9rem auto 12.7rem;
@@ -1143,14 +1149,15 @@ body {
 
     &__img-background {
       width: 44.5rem;
-      right: 16.5rem;
+      right: 0;
+      top: -3.9rem;
     }
 
     &__img-container {
       width: 44.5rem;
       height: 58.4rem;
-      top: 14.1rem;
-      right: 16.5rem;
+      top: 10.2rem;
+      right: 0;
     }
 
     &__img {
@@ -1172,12 +1179,13 @@ body {
     }
 
     &__rings {
-      top: 13.3rem;
+      top: 9.4rem;
+      left: -26.5rem;
     }
 
     &__circle-container {
-      right: 54.5rem;
-      top: 51rem;
+      right: 38rem;
+      top: 47.1rem;
     }
   }
 
@@ -1194,6 +1202,8 @@ body {
 
     &__rings-container {
       right: -16.5rem;
+      // right: -40.4rem;
+      // width: 53rem;
     }
   }
 

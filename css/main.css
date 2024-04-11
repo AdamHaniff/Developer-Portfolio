@@ -866,6 +866,11 @@ body {
   body {
     padding: 0 16.5rem;
   }
+  .container {
+    max-width: 109.364rem;
+    margin: 0 auto;
+    position: relative;
+  }
   .header-footer {
     margin: 3.9rem auto 12.7rem;
   }
@@ -874,13 +879,14 @@ body {
   }
   .about-me__img-background {
     width: 44.5rem;
-    right: 16.5rem;
+    right: 0;
+    top: -3.9rem;
   }
   .about-me__img-container {
     width: 44.5rem;
     height: 58.4rem;
-    top: 14.1rem;
-    right: 16.5rem;
+    top: 10.2rem;
+    right: 0;
   }
   .about-me__img {
     transform: translate(-4.2rem);
@@ -897,11 +903,12 @@ body {
     gap: 1.4rem;
   }
   .about-me__rings {
-    top: 13.3rem;
+    top: 9.4rem;
+    left: -26.5rem;
   }
   .about-me__circle-container {
-    right: 54.5rem;
-    top: 51rem;
+    right: 38rem;
+    top: 47.1rem;
   }
   .skills {
     padding: 7.2rem 0 14rem;
