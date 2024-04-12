@@ -920,7 +920,8 @@ body {
     letter-spacing: -0.15rem;
   }
   .skills__rings-container {
-    right: -16.5rem;
+    right: -40.4rem;
+    width: 53rem;
   }
   .projects {
     padding: 0 0 13.9rem;
@@ -964,6 +965,18 @@ body {
   }
   .footer__border {
     margin-bottom: 4.7rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .action-text:hover {
+    color: #4ee1a0;
+    cursor: pointer;
+  }
+  .header-footer__socials-link:hover .header-footer__socials-icon path {
+    fill: #4ee1a0;
+  }
+  .about-me__email-icon-link:hover .about-me__email-icon path {
+    fill: #4ee1a0;
   }
 }
 .form__input-error-icon--error {

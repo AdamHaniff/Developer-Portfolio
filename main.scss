@@ -1201,9 +1201,8 @@ body {
     }
 
     &__rings-container {
-      right: -16.5rem;
-      // right: -40.4rem;
-      // width: 53rem;
+      right: -40.4rem;
+      width: 53rem;
     }
   }
 
@@ -1268,6 +1267,29 @@ body {
 
     &__border {
       margin-bottom: 4.7rem;
+    }
+  }
+}
+
+// *********** DESKTOP HOVER STATES ***********
+// ************* 992px MEDIA QUERY *************
+@media only screen and (min-width: 62em) {
+  .action-text:hover {
+    color: $color-medium-aquamarine;
+    cursor: pointer;
+  }
+
+  // ***************** HEADER *****************
+  .header-footer {
+    &__socials-link:hover &__socials-icon path {
+      fill: $color-medium-aquamarine;
+    }
+  }
+
+  // ***************** ABOUT-ME ****************
+  .about-me {
+    &__email-icon-link:hover &__email-icon path {
+      fill: $color-medium-aquamarine;
     }
   }
 }
