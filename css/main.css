@@ -40,6 +40,7 @@ body {
   padding-bottom: 1rem;
   border: none;
   border-bottom: 0.2rem solid #4ee1a0;
+  transition: all 0.3s;
 }
 
 .header-footer {
@@ -61,6 +62,9 @@ body {
 .header-footer__socials {
   display: flex;
   gap: 1.8rem;
+}
+.header-footer__socials-icon path {
+  transition: all 0.3s;
 }
 
 .about-me {
@@ -119,11 +123,15 @@ body {
 .about-me__email-icon-link:link, .about-me__email-icon-link:visited {
   height: 2.4rem;
 }
+.about-me__email-icon path {
+  transition: all 0.3s;
+}
 .about-me__email:link, .about-me__email:visited {
   color: #ffffff;
   font-size: 1.6rem;
   text-decoration: none;
   border-bottom: 0.2rem solid #4ee1a0;
+  transition: all 0.3s;
 }
 .about-me__rings {
   display: block;
@@ -216,6 +224,9 @@ body {
 .project__img {
   display: block;
   width: 100%;
+}
+.project__img-action-texts {
+  display: none;
 }
 .project__name {
   display: inline-block;
@@ -937,6 +948,23 @@ body {
   }
   .project__img-container {
     max-width: 54.5rem;
+    position: relative;
+  }
+  .project__img-action-texts {
+    opacity: 0;
+    visibility: hidden;
+    background: transparent;
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4.8rem;
+    transition: all 0.3s;
   }
   .project__technologies {
     margin-bottom: initial;
@@ -977,6 +1005,15 @@ body {
   }
   .about-me__email-icon-link:hover .about-me__email-icon path {
     fill: #4ee1a0;
+  }
+  .about-me__email:hover {
+    color: #4ee1a0;
+  }
+  .project__img-container:hover .project__img-action-texts {
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.75);
   }
 }
 .form__input-error-icon--error {
