@@ -2,6 +2,7 @@
 // import "regenerator-runtime/runtime";
 
 // VARIABLES
+const nameLogo = document.querySelectorAll(".header-footer__name");
 const contactMe = document.querySelectorAll('[href="#contact"]');
 const contactSection = document.querySelector(".contact");
 const form = document.querySelector(".form");
@@ -127,6 +128,14 @@ function isAnyInputEmpty() {
   }
 }
 
+function scrollToTop() {
+  // Smoothly scroll to the top of the page
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
 // EVENT LISTENER CALLBACK FUNCTIONS
 function handleFormSubmit(e) {
   // Prevent default form submission behavior
@@ -169,6 +178,13 @@ function handleContactMeClick(e) {
   contactSection.scrollIntoView({ behavior: "smooth" });
 }
 
+function handleNameLogoClick(e) {
+  // When the 'nameLogo' is clicked, scroll smoothly to the top of the page
+  e.preventDefault();
+  scrollToTop();
+}
+
 // EVENT LISTENERS
 form.addEventListener("submit", handleFormSubmit);
 contactMe.forEach((el) => el.addEventListener("click", handleContactMeClick));
+nameLogo.forEach((el) => el.addEventListener("click", handleNameLogoClick));

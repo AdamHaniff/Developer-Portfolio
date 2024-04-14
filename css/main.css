@@ -1021,4 +1021,29 @@ body {
 }
 .form__input-error-icon--success {
   border-bottom: 0.1rem solid #4ee1a0;
+}
+
+.header-footer__socials-link {
+  position: relative;
+}
+
+.header-footer__socials-link::after {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.header-footer__socials-link:hover::after {
+  content: attr(aria-label);
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #151515;
+  color: #4ee1a0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
