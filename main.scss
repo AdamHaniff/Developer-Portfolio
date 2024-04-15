@@ -48,6 +48,28 @@ body {
   height: 100%;
 }
 
+// ****************** MIXINS ******************
+@mixin socials-email-link-after-styles {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+@mixin socials-email-link-hover-after-styles($top, $background) {
+  content: attr(aria-label);
+  position: absolute;
+  top: $top;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $background;
+  color: $color-medium-aquamarine;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  opacity: 1;
+}
+
 // ********* 375px LAYOUT *********
 body {
   padding: 0 1.6rem;
@@ -91,6 +113,14 @@ body {
   &__socials {
     display: flex;
     gap: 1.8rem;
+  }
+
+  &__socials-link {
+    position: relative;
+
+    &::after {
+      @include socials-email-link-after-styles;
+    }
   }
 
   &__socials-icon path {
@@ -163,6 +193,11 @@ body {
   &__email-icon-link:link,
   &__email-icon-link:visited {
     height: 2.4rem;
+    position: relative;
+  }
+
+  &__email-icon-link::after {
+    @include socials-email-link-after-styles;
   }
 
   &__email-icon path {
@@ -1317,12 +1352,23 @@ body {
     &__socials-link:hover &__socials-icon path {
       fill: $color-medium-aquamarine;
     }
+
+    &__socials-link:hover::after {
+      @include socials-email-link-hover-after-styles(105%, $color-cinder);
+    }
   }
 
   // ***************** ABOUT-ME ****************
   .about-me {
     &__email-icon-link:hover &__email-icon path {
       fill: $color-medium-aquamarine;
+    }
+
+    &__email-icon-link:hover::after {
+      @include socials-email-link-hover-after-styles(
+        110%,
+        $color-dark-jungle-green
+      );
     }
 
     &__email:hover {
@@ -1352,29 +1398,4 @@ body {
   &__input-error-icon--success {
     border-bottom: 0.1rem solid $color-medium-aquamarine;
   }
-}
-
-.header-footer__socials-link {
-  position: relative;
-}
-
-.header-footer__socials-link::after {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.header-footer__socials-link:hover::after {
-  content: attr(aria-label);
-  position: absolute;
-  top: 105%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: $color-cinder;
-  color: $color-medium-aquamarine;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 1.4rem;
-  white-space: nowrap;
-  opacity: 1;
 }

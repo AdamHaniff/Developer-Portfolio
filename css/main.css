@@ -63,6 +63,14 @@ body {
   display: flex;
   gap: 1.8rem;
 }
+.header-footer__socials-link {
+  position: relative;
+}
+.header-footer__socials-link::after {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
 .header-footer__socials-icon path {
   transition: all 0.3s;
 }
@@ -122,6 +130,12 @@ body {
 }
 .about-me__email-icon-link:link, .about-me__email-icon-link:visited {
   height: 2.4rem;
+  position: relative;
+}
+.about-me__email-icon-link::after {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 .about-me__email-icon path {
   transition: all 0.3s;
@@ -1003,8 +1017,36 @@ body {
   .header-footer__socials-link:hover .header-footer__socials-icon path {
     fill: #4ee1a0;
   }
+  .header-footer__socials-link:hover::after {
+    content: attr(aria-label);
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #151515;
+    color: #4ee1a0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    opacity: 1;
+  }
   .about-me__email-icon-link:hover .about-me__email-icon path {
     fill: #4ee1a0;
+  }
+  .about-me__email-icon-link:hover::after {
+    content: attr(aria-label);
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #242424;
+    color: #4ee1a0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    opacity: 1;
   }
   .about-me__email:hover {
     color: #4ee1a0;
@@ -1021,29 +1063,4 @@ body {
 }
 .form__input-error-icon--success {
   border-bottom: 0.1rem solid #4ee1a0;
-}
-
-.header-footer__socials-link {
-  position: relative;
-}
-
-.header-footer__socials-link::after {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.header-footer__socials-link:hover::after {
-  content: attr(aria-label);
-  position: absolute;
-  top: 105%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #151515;
-  color: #4ee1a0;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 1.4rem;
-  white-space: nowrap;
-  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
