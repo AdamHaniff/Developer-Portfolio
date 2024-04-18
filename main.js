@@ -1,5 +1,5 @@
-// import "core-js/stable";
-// import "regenerator-runtime/runtime";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 // VARIABLES
 const nameLogo = document.querySelectorAll(".header-footer__name");
