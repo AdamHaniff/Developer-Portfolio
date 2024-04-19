@@ -179,8 +179,10 @@ function handleContactMeClick(e) {
 }
 
 function handleNameLogoClick(e) {
-  // When the 'nameLogo' is clicked, scroll smoothly to the top of the page
+  // Prevent the default behavior of the anchor link
   e.preventDefault();
+
+  // When the 'nameLogo' is clicked, scroll smoothly to the top of the page
   scrollToTop();
 }
 

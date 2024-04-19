@@ -1,0 +1,21 @@
+// ****************** MIXINS ******************
+@mixin socials-email-link-after-styles {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+@mixin socials-email-link-hover-after-styles($top, $background) {
+  content: attr(aria-label);
+  position: absolute;
+  top: $top;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $background;
+  color: $color-medium-aquamarine;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  opacity: 1;
+}

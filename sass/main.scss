@@ -1,26 +1,5 @@
-// ********* DESIGN SYSTEM *********
-
-// ************ COLORS ************
-$color-cinder: #151515;
-$color-medium-aquamarine: #4ee1a0;
-$color-dark-jungle-green: #242424;
-$color-light-grey: #d9d9d9;
-$color-white: #ffffff;
-$color-white-50-percent: rgba(255, 255, 255, 0.5);
-$color-bittersweet: #ff6f5b;
-$color-background-image-mobile: linear-gradient(
-  180deg,
-  rgba(36, 36, 36, 0) 0.65%,
-  $color-dark-jungle-green 100%
-);
-$color-black-75-percent: rgba(0, 0, 0, 0.75);
-
-// ********** FONT-FAMILY **********
-$font-space-grotesk: "Space Grotesk", sans-serif;
-
-// ********* FONT-WEIGHTS **********
-$fw-500: 500;
-$fw-700: 700;
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
 // ************* BASE **************
 *,
@@ -46,28 +25,6 @@ body {
 html,
 body {
   height: 100%;
-}
-
-// ****************** MIXINS ******************
-@mixin socials-email-link-after-styles {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-@mixin socials-email-link-hover-after-styles($top, $background) {
-  content: attr(aria-label);
-  position: absolute;
-  top: $top;
-  left: 50%;
-  transform: translateX(-50%);
-  background: $background;
-  color: $color-medium-aquamarine;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 1.4rem;
-  white-space: nowrap;
-  opacity: 1;
 }
 
 // ********* 375px LAYOUT *********
