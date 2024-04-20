@@ -1,31 +1,9 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
-// ************* BASE **************
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
+@import "base/base";
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-body {
-  background: $color-cinder;
-  color: $color-white;
-  font-family: $font-space-grotesk;
-  overflow-x: hidden;
-}
-
-html,
-body {
-  height: 100%;
-}
+@import "dynamic/dynamic-styles";
 
 // ********* 375px LAYOUT *********
 body {
@@ -1341,18 +1319,5 @@ body {
       visibility: visible;
       background: $color-black-75-percent;
     }
-  }
-}
-
-// *** CLASSES USED WITH JAVASCRIPT ***
-
-// *************** FORM ***************
-.form {
-  &__input-error-icon--error {
-    border-bottom: 0.1rem solid $color-bittersweet;
-  }
-
-  &__input-error-icon--success {
-    border-bottom: 0.1rem solid $color-medium-aquamarine;
   }
 }

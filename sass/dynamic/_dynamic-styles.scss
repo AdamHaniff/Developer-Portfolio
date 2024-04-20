@@ -1,0 +1,12 @@
+// *** CLASSES USED WITH JAVASCRIPT ***
+
+// *************** FORM ***************
+.form {
+  &__input-error-icon--error {
+    border-bottom: 0.1rem solid $color-bittersweet;
+  }
+
+  &__input-error-icon--success {
+    border-bottom: 0.1rem solid $color-medium-aquamarine;
+  }
+}
