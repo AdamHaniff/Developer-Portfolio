@@ -1,0 +1,201 @@
+// ************* TABLET LAYOUTS *************
+
+// ************** 768px LAYOUT **************
+@media only screen and (min-width: 48em) {
+  body {
+    padding: 0 3rem;
+  }
+
+  // **************** HEADER ****************
+  .header-footer {
+    margin: 2.9rem auto 9rem;
+
+    &__name:link,
+    &__name:visited {
+      font-size: 3.2rem;
+      letter-spacing: -0.0444rem;
+    }
+
+    &__socials {
+      width: 19.2rem;
+    }
+  }
+
+  // *************** ABOUT-ME ***************
+  .about-me {
+    margin-bottom: 6rem;
+
+    &__img-background {
+      width: 32.2rem;
+    }
+
+    &__img-container {
+      width: 32.2rem;
+      height: 55.4rem;
+      top: 12.7rem;
+    }
+
+    &__img {
+      height: 100%;
+    }
+
+    &__header {
+      font-size: 6.8rem;
+      line-height: 6.8rem;
+      letter-spacing: -0.2045rem;
+      margin-bottom: 5.6rem;
+    }
+
+    &__name {
+      border-bottom: 0.6rem solid $color-medium-aquamarine;
+    }
+
+    &__info {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      margin-bottom: 3.4rem;
+    }
+
+    &__email-container {
+      margin-bottom: 3.4rem;
+    }
+
+    &__email-icon-link {
+      transform: translateY(0.1rem);
+    }
+
+    &__email:link,
+    &__email:visited {
+      font-size: 1.8rem;
+    }
+
+    &__rings {
+      top: 8.6rem;
+      left: -26.4rem;
+    }
+
+    &__circle-container {
+      top: 55.1rem;
+    }
+  }
+
+  // **************** SKILLS ***************
+  .skills {
+    padding: 5.2rem 0 10rem;
+    gap: 5.2rem 12.1rem;
+
+    &__container {
+      gap: 1.4rem;
+    }
+
+    &__name-icon {
+      gap: 1.4rem;
+    }
+
+    &__name {
+      font-size: 4.6rem;
+      line-height: 5.3rem;
+      letter-spacing: -0.14rem;
+    }
+
+    &__experience {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+
+    &__rings-container {
+      width: 19.8rem;
+      right: -3rem;
+      bottom: initial;
+      top: 38.6rem;
+    }
+  }
+
+  // *************** PROJECTS ***************
+  .projects {
+    margin-top: initial;
+    padding: 0 0 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem 2rem;
+
+    &-header {
+      grid-column: span 2;
+
+      &__title {
+        font-size: 7.2rem;
+        line-height: 7.2rem;
+        letter-spacing: -0.2045rem;
+      }
+    }
+
+    & .project:last-child {
+      grid-column: span 2;
+    }
+  }
+
+  // **************** PROJECT ****************
+  .project {
+    justify-self: center;
+  }
+
+  // **************** CONTACT ****************
+  .contact {
+    margin: 0 -3rem;
+    padding: 6rem 0 9.2rem;
+
+    &__text-container {
+      max-width: 44.5rem;
+      margin-bottom: 4.8rem;
+    }
+
+    &__header {
+      font-size: 7.2rem;
+      line-height: 7.2rem;
+      letter-spacing: -0.2045rem;
+    }
+
+    &__text {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  // ***************** FORM *****************
+  .form {
+    max-width: 44.5rem;
+
+    &__rings {
+      left: -36.8rem;
+      bottom: 2.7rem;
+    }
+  }
+
+  // **************** FOOTER ****************
+  .footer {
+    margin: 0 -3rem;
+    padding: 0 3rem 4rem;
+
+    &__border {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+// ************** 900px LAYOUT **************
+@media only screen and (min-width: 56.25em) {
+  // *************** ABOUT-ME ***************
+  .about-me {
+    &__img-background {
+      width: 40rem;
+    }
+
+    &__img-container {
+      width: 40rem;
+    }
+
+    &__img {
+      height: 65rem;
+    }
+  }
+}

@@ -1,0 +1,685 @@
+// ******** MOBILE LAYOUTS ********
+
+// ********* 375px LAYOUT *********
+body {
+  padding: 0 1.6rem;
+}
+
+.action-text,
+.action-text:link,
+.action-text:visited {
+  display: inline-block;
+  color: $color-white;
+  font-size: 1.6rem;
+  font-weight: $fw-700;
+  letter-spacing: 0.2286rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  border: none;
+  border-bottom: 0.2rem solid $color-medium-aquamarine;
+  transition: all 0.3s;
+}
+
+// ************* HEADER *************
+.header-footer {
+  width: 15.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto 4.9rem;
+
+  &__name:link,
+  &__name:visited {
+    font-size: 2.4rem;
+    font-weight: $fw-700;
+    line-height: 3.2rem;
+    letter-spacing: -0.0333rem;
+    color: $color-white;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1.8rem;
+  }
+
+  &__socials-link {
+    position: relative;
+
+    &::after {
+      @include socials-email-link-after-styles;
+    }
+  }
+
+  &__socials-icon path {
+    transition: all 0.3s;
+  }
+}
+
+// *************** ABOUT-ME ***************
+.about-me {
+  margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img-background {
+    background: $color-background-image-mobile;
+    width: 17.4rem;
+    height: 38.3rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &__img-container {
+    margin-bottom: 4rem;
+  }
+
+  &__img {
+    display: block;
+    width: 17.4rem;
+    height: auto;
+    filter: grayscale(100%);
+  }
+
+  &__text {
+    max-width: 34.3rem;
+    text-align: center;
+  }
+
+  &__header {
+    font-size: 4rem;
+    font-weight: $fw-700;
+    line-height: 4rem;
+    letter-spacing: -0.1136rem;
+    margin-bottom: 2rem;
+  }
+
+  &__name {
+    display: inline-block;
+    border-bottom: 0.4rem solid $color-medium-aquamarine;
+  }
+
+  &__info {
+    color: $color-light-grey;
+    font-size: 1.6rem;
+    font-weight: $fw-500;
+    line-height: 2.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__email-container {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 2.4rem;
+  }
+
+  &__email-icon-link:link,
+  &__email-icon-link:visited {
+    height: 2.4rem;
+    position: relative;
+  }
+
+  &__email-icon-link::after {
+    @include socials-email-link-after-styles;
+  }
+
+  &__email-icon path {
+    transition: all 0.3s;
+  }
+
+  &__email:link,
+  &__email:visited {
+    color: $color-white;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border-bottom: 0.2rem solid $color-medium-aquamarine;
+    transition: all 0.3s;
+  }
+
+  &__rings {
+    display: block;
+    position: absolute;
+    top: 12.4rem;
+    left: -34.2rem;
+    z-index: -2;
+  }
+
+  &__circle-container {
+    width: 6.5rem;
+    position: absolute;
+    top: 25.4rem;
+    right: 0;
+    overflow-x: hidden;
+  }
+}
+
+// ************* SKILLS *************
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  border-top: 0.1rem solid $color-white;
+  padding: 4rem 0;
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__name-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__name {
+    font-size: 3.2rem;
+    font-weight: $fw-700;
+    line-height: 4rem;
+    letter-spacing: -0.1rem;
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.4rem;
+
+    path {
+      fill: $color-white;
+    }
+  }
+
+  &__experience {
+    color: $color-light-grey;
+    font-size: 1.6rem;
+    font-weight: $fw-500;
+    line-height: 2.6rem;
+  }
+
+  &__rings-container {
+    width: 18.6rem;
+    position: absolute;
+    bottom: 0;
+    right: -1.6rem;
+    transform: translateY(50%);
+    z-index: -1;
+    overflow-x: hidden;
+  }
+}
+
+// ************ PROJECTS ************
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  border-top: 0.1rem solid $color-white;
+  padding: 8rem 0;
+
+  &-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      font-size: 4rem;
+      font-weight: $fw-700;
+      line-height: 4rem;
+      letter-spacing: -0.1136rem;
+    }
+  }
+}
+
+// ************ PROJECT ************
+.project {
+  &__img-container {
+    max-width: 34.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__img-action-texts {
+    display: none;
+  }
+
+  &__name {
+    display: inline-block;
+    font-size: 2.4rem;
+    font-weight: $fw-700;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+  }
+
+  &__technologies {
+    display: flex;
+    gap: 1.8rem;
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  &__technology {
+    color: $color-light-grey;
+    font-size: 1.8rem;
+    font-weight: $fw-500;
+    line-height: 2.8rem;
+    text-transform: uppercase;
+  }
+
+  &__action-texts {
+    display: flex;
+    gap: 3.2rem;
+  }
+}
+
+// ************ CONTACT ************
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-dark-jungle-green;
+  margin: 0 -1.6rem;
+  padding: 6rem 1.6rem 8.7rem;
+  position: relative;
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    max-width: 34.3rem;
+  }
+
+  &__header {
+    font-size: 4rem;
+    font-weight: $fw-700;
+    line-height: 4rem;
+    letter-spacing: -0.1136rem;
+  }
+
+  &__text {
+    color: $color-light-grey;
+    font-size: 1.6rem;
+    font-weight: $fw-500;
+    line-height: 2.6rem;
+  }
+}
+
+// ************** FORM **************
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  position: relative;
+  z-index: 3;
+  max-width: 34.3rem;
+  width: 100%;
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__input-error-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid $color-white;
+    padding-bottom: 1.8rem;
+  }
+
+  &__input {
+    flex-grow: 1;
+    background: inherit;
+    border: none;
+    padding-left: 2.4rem;
+    color: $color-white;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: $fw-500;
+    line-height: 2.6rem;
+    letter-spacing: -0.0222rem;
+
+    &::placeholder {
+      color: $color-white-50-percent;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__error-icon {
+    display: block;
+    width: 2.45rem;
+    height: 2.45rem;
+    margin-left: 1rem;
+  }
+
+  &__error {
+    margin: 0 0 -1.1rem auto;
+    color: $color-bittersweet;
+    font-size: 1.2rem;
+    font-weight: $fw-500;
+    line-height: 1.6rem;
+    letter-spacing: -0.0167rem;
+  }
+
+  &__input--message {
+    height: 8.7rem;
+    resize: none;
+  }
+
+  &__btn {
+    background: none;
+    align-self: flex-end;
+    font-family: inherit;
+  }
+
+  &__rings {
+    display: block;
+    position: absolute;
+    top: 51.7rem;
+    left: -34.3rem;
+    z-index: 2;
+  }
+}
+
+// ************* FOOTER *************
+.footer {
+  background: $color-dark-jungle-green;
+  margin: 0 -1.6rem;
+  padding: 0 1.6rem 6rem;
+
+  &__border {
+    border-top: 0.1rem solid $color-white;
+    margin-bottom: 3.9rem;
+  }
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+// ********* 320px - 374px LAYOUT *********
+@media only screen and (max-width: 23.375em) {
+  // ************** ABOUT-ME **************
+  .about-me {
+    &__header {
+      font-size: 3.6rem;
+    }
+
+    &__email:link,
+    &__email:visited {
+      font-size: 1.55rem;
+    }
+  }
+
+  // ************** PROJECTS **************
+  .projects {
+    &-header__title {
+      font-size: 3.6rem;
+    }
+  }
+
+  // ************** PROJECT **************
+  .project {
+    &__name {
+      font-size: 2rem;
+    }
+
+    &__technology {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// ************* 572px LAYOUT *************
+@media only screen and (min-width: 35.75em) {
+  body {
+    padding: 0 2.2rem;
+  }
+
+  // *************** HEADER ***************
+  .header-footer {
+    width: initial;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: initial;
+    margin: 2.2rem auto 6.7rem;
+
+    &__name:link,
+    &__name:visited {
+      font-size: 2.8rem;
+      letter-spacing: -0.03885rem;
+      text-align: initial;
+    }
+
+    &__socials {
+      gap: initial;
+      width: 17.4rem;
+      justify-content: space-between;
+    }
+  }
+
+  // ************** ABOUT-ME **************
+  .about-me {
+    margin-bottom: 7rem;
+    flex-direction: row;
+    align-items: initial;
+
+    &__img-background {
+      background: $color-dark-jungle-green;
+      width: 23rem;
+      left: initial;
+      right: 0;
+      transform: initial;
+    }
+
+    &__img-container {
+      width: 23rem;
+      height: 49.9rem;
+      position: absolute;
+      top: 9.5rem;
+      right: 0;
+      overflow: hidden;
+      margin-bottom: initial;
+    }
+
+    &__img {
+      width: auto;
+      height: 100%;
+      transform: translateX(-4rem);
+    }
+
+    &__text {
+      max-width: 31rem;
+      text-align: initial;
+    }
+
+    &__header {
+      font-size: 5.2rem;
+      line-height: 5.2rem;
+      letter-spacing: -0.15905rem;
+      margin-bottom: 4rem;
+    }
+
+    &__name {
+      border-bottom: 0.5rem solid $color-medium-aquamarine;
+    }
+
+    &__info {
+      margin-bottom: 3rem;
+    }
+
+    &__email-container {
+      margin-bottom: 3rem;
+    }
+
+    &__rings {
+      top: 6.4rem;
+    }
+
+    &__circle-container {
+      top: 46.4rem;
+    }
+  }
+
+  // *************** SKILLS ***************
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.8rem 9rem;
+    padding: 4.6rem 0 7rem;
+
+    &__container {
+      align-items: initial;
+      gap: 1.2rem;
+    }
+
+    &__name-icon {
+      gap: 1.2rem;
+    }
+
+    &__name {
+      font-size: 3.4rem;
+      line-height: 4.25rem;
+      letter-spacing: -0.105rem;
+    }
+
+    &__experience {
+      font-size: 1.7rem;
+      line-height: 2.7rem;
+    }
+
+    &__rings-container {
+      transform: initial;
+      right: -2.2rem;
+      bottom: 0;
+    }
+  }
+
+  // ************** PROJECTS **************
+  .projects {
+    border-top: initial;
+    margin-top: 2.6rem;
+    padding: 0 0 7.4rem;
+    gap: 5rem;
+
+    &-header__title {
+      font-size: 5.6rem;
+      line-height: 5.6rem;
+      letter-spacing: -0.15905rem;
+    }
+  }
+
+  // *************** CONTACT ***************
+  .contact {
+    margin: 0 -2.2rem;
+    padding: 6rem 0 8.95rem;
+
+    &__text-container {
+      margin-bottom: 4.9rem;
+      max-width: 39.4rem;
+    }
+
+    &__header {
+      font-size: 5.6rem;
+      line-height: 5.6rem;
+      letter-spacing: -0.15905rem;
+    }
+
+    &__text {
+      font-size: 1.7rem;
+      line-height: 2.7rem;
+    }
+  }
+
+  // **************** FORM ****************
+  .form {
+    max-width: 39.4rem;
+
+    &__rings {
+      top: initial;
+      bottom: 1.5rem;
+    }
+  }
+
+  // *************** FOOTER ***************
+  .footer {
+    margin: 0 -2.2rem;
+    padding: 0 2.2rem 3rem;
+
+    &__border {
+      margin-bottom: 2.2rem;
+    }
+
+    .centered {
+      margin: 0 auto;
+    }
+  }
+}
+
+// ************** 672px LAYOUT *************
+@media only screen and (min-width: 42em) {
+  // ************** ABOUT-ME **************
+  .about-me {
+    &__img-background {
+      width: 30rem;
+    }
+
+    &__img-container {
+      width: 30rem;
+    }
+
+    &__img {
+      transform: initial;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__text {
+      max-width: 34rem;
+    }
+  }
+}
+
+// ************** 720px LAYOUT **************
+@media only screen and (min-width: 45em) {
+  // *************** ABOUT-ME ***************
+  .about-me {
+    &__text {
+      max-width: 40rem;
+    }
+
+    &__img-container {
+      height: 47.2rem;
+    }
+
+    &__img {
+      height: 49.9rem;
+    }
+
+    &__circle-container {
+      top: 43.8rem;
+    }
+  }
+}
