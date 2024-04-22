@@ -1,0 +1,48 @@
+// ************ DESKTOP HOVER STATES ************
+
+// ************* 992px MEDIA QUERY *************
+@media only screen and (min-width: 62em) {
+  .action-text:hover {
+    color: $color-medium-aquamarine;
+    cursor: pointer;
+  }
+
+  // ***************** HEADER *****************
+  .header-footer {
+    &__socials-link:hover &__socials-icon path {
+      fill: $color-medium-aquamarine;
+    }
+
+    &__socials-link:hover::after {
+      @include socials-email-link-hover-after-styles(105%, $color-cinder);
+    }
+  }
+
+  // ***************** ABOUT-ME ****************
+  .about-me {
+    &__email-icon-link:hover &__email-icon path {
+      fill: $color-medium-aquamarine;
+    }
+
+    &__email-icon-link:hover::after {
+      @include socials-email-link-hover-after-styles(
+        110%,
+        $color-dark-jungle-green
+      );
+    }
+
+    &__email:hover {
+      color: $color-medium-aquamarine;
+    }
+  }
+
+  // ***************** PROJECT *****************
+  .project {
+    &__img-container:hover &__img-action-texts {
+      cursor: pointer;
+      opacity: 1;
+      visibility: visible;
+      background: $color-black-75-percent;
+    }
+  }
+}

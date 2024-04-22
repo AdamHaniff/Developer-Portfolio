@@ -23,6 +23,13 @@ body {
   height: 100%;
 }
 
+.form__input-error-icon--error {
+  border-bottom: 0.1rem solid #ff6f5b;
+}
+.form__input-error-icon--success {
+  border-bottom: 0.1rem solid #4ee1a0;
+}
+
 body {
   padding: 0 1.6rem;
 }
@@ -1057,10 +1064,4 @@ body {
     visibility: visible;
     background: rgba(0, 0, 0, 0.75);
   }
-}
-.form__input-error-icon--error {
-  border-bottom: 0.1rem solid #ff6f5b;
-}
-.form__input-error-icon--success {
-  border-bottom: 0.1rem solid #4ee1a0;
 }/*# sourceMappingURL=main.css.map */
