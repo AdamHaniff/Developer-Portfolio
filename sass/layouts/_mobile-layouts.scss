@@ -1,6 +1,6 @@
-// ******** MOBILE LAYOUTS ********
+// **************** MOBILE LAYOUTS ****************
 
-// ********* 375px LAYOUT *********
+// ***************** 375px LAYOUT *****************
 body {
   padding: 0 1.6rem;
 }
@@ -21,7 +21,7 @@ body {
   transition: all 0.3s;
 }
 
-// ************* HEADER *************
+// ******************** HEADER ********************
 .header-footer {
   width: 15.4rem;
   display: flex;
@@ -58,7 +58,7 @@ body {
   }
 }
 
-// *************** ABOUT-ME ***************
+// ******************* ABOUT-ME *******************
 .about-me {
   margin-bottom: 8rem;
   display: flex;
@@ -160,7 +160,7 @@ body {
   }
 }
 
-// ************* SKILLS *************
+// ******************** SKILLS ********************
 .skills {
   display: flex;
   flex-direction: column;
@@ -216,7 +216,7 @@ body {
   }
 }
 
-// ************ PROJECTS ************
+// ******************* PROJECTS *******************
 .projects {
   display: flex;
   flex-direction: column;
@@ -240,7 +240,7 @@ body {
   }
 }
 
-// ************ PROJECT ************
+// ******************** PROJECT ********************
 .project {
   &__img-container {
     max-width: 34.5rem;
@@ -286,7 +286,7 @@ body {
   }
 }
 
-// ************ CONTACT ************
+// ******************** CONTACT ********************
 .contact {
   display: flex;
   flex-direction: column;
@@ -321,7 +321,7 @@ body {
   }
 }
 
-// ************** FORM **************
+// ********************* FORM *********************
 .form {
   display: flex;
   flex-direction: column;
@@ -402,7 +402,7 @@ body {
   }
 }
 
-// ************* FOOTER *************
+// ******************** FOOTER ********************
 .footer {
   background: $color-dark-jungle-green;
   margin: 0 -1.6rem;
@@ -418,9 +418,9 @@ body {
   margin: 0 auto;
 }
 
-// ********* 320px - 374px LAYOUT *********
+// ************* 320px - 374px LAYOUT *************
 @media only screen and (max-width: 23.375em) {
-  // ************** ABOUT-ME **************
+  // ****************** ABOUT-ME ******************
   .about-me {
     &__header {
       font-size: 3.6rem;
@@ -432,14 +432,14 @@ body {
     }
   }
 
-  // ************** PROJECTS **************
+  // ****************** PROJECTS ******************
   .projects {
     &-header__title {
       font-size: 3.6rem;
     }
   }
 
-  // ************** PROJECT **************
+  // ******************* PROJECT *******************
   .project {
     &__name {
       font-size: 2rem;
@@ -451,13 +451,13 @@ body {
   }
 }
 
-// ************* 572px LAYOUT *************
+// ***************** 572px LAYOUT *****************
 @media only screen and (min-width: 35.75em) {
   body {
     padding: 0 2.2rem;
   }
 
-  // *************** HEADER ***************
+  // ******************* HEADER *******************
   .header-footer {
     width: initial;
     flex-direction: row;
@@ -480,7 +480,7 @@ body {
     }
   }
 
-  // ************** ABOUT-ME **************
+  // ****************** ABOUT-ME ******************
   .about-me {
     margin-bottom: 7rem;
     flex-direction: row;
@@ -543,7 +543,7 @@ body {
     }
   }
 
-  // *************** SKILLS ***************
+  // ******************* SKILLS *******************
   .skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -577,7 +577,7 @@ body {
     }
   }
 
-  // ************** PROJECTS **************
+  // ****************** PROJECTS *******************
   .projects {
     border-top: initial;
     margin-top: 2.6rem;
@@ -591,7 +591,7 @@ body {
     }
   }
 
-  // *************** CONTACT ***************
+  // ******************* CONTACT *******************
   .contact {
     margin: 0 -2.2rem;
     padding: 6rem 0 8.95rem;
@@ -613,7 +613,7 @@ body {
     }
   }
 
-  // **************** FORM ****************
+  // ******************** FORM ********************
   .form {
     max-width: 39.4rem;
 
@@ -623,7 +623,7 @@ body {
     }
   }
 
-  // *************** FOOTER ***************
+  // ******************* FOOTER *******************
   .footer {
     margin: 0 -2.2rem;
     padding: 0 2.2rem 3rem;
@@ -638,9 +638,9 @@ body {
   }
 }
 
-// ************** 672px LAYOUT *************
+// ****************** 672px LAYOUT *****************
 @media only screen and (min-width: 42em) {
-  // ************** ABOUT-ME **************
+  // ****************** ABOUT-ME ******************
   .about-me {
     &__img-background {
       width: 30rem;
@@ -662,9 +662,9 @@ body {
   }
 }
 
-// ************** 720px LAYOUT **************
+// ***************** 720px LAYOUT *****************
 @media only screen and (min-width: 45em) {
-  // *************** ABOUT-ME ***************
+  // ****************** ABOUT-ME ******************
   .about-me {
     &__text {
       max-width: 40rem;
